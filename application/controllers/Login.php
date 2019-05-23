@@ -33,7 +33,7 @@ class Login extends CI_Controller {
       $this->session->set_userdata('level', $row->level);
 
       if($this->session->userdata('level')=='Admin'){
-        redirect('admin');
+        redirect('admin/home');
       }elseif($this->session->userdata('level')=='Siswa'){
         redirect('siswa/index');
       }

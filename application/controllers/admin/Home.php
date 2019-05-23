@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 
     $this->load->database();
     $this->load->helper('url');
-    $this->load->model('Siswa_model');
+    $this->load->model('admin/Siswa_model');
     $this->load->library('grocery_CRUD');
   }
   public function index()
@@ -24,9 +24,9 @@ class Home extends CI_Controller {
 
       $grocery = $gr->render();
 
-      $this->load->view('templates/header', $data);
-      $this->load->view('home/index', compact('grocery'));
-      $this->load->view('templates/footer', $data);
+      $this->load->view('admin/templates/header', $data);
+      $this->load->view('admin/home/index', compact('grocery'));
+      $this->load->view('admin/templates/footer', $data);
     } catch (Exception $e) {
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
     }
