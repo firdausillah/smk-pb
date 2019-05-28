@@ -1,157 +1,148 @@
-
-<?php $nav = $nav_uri = explode('/', $_SERVER['REQUEST_URI']);
-// $nav_dok = $nav[count($nav)]
-$nav = $nav[3];
-// print_r($nav[3]);
-?>
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-	<title><?= $judul;  ?></title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<!-- VENDOR CSS -->
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/vendor/bootstrap/css/style.css">
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/vendor/linearicons/style.css">
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/vendor/chartist/css/chartist-custom.css">
-	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/css/main.css">
-	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-	<link rel="stylesheet" href="<?= base_url(); ?>admin/assets/css/demo.css">
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="<?=base_url();?>admin/ssets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="<?=base_url();?>admin/assets/img/favicon.png">
-</head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-<body>
-  <!-- WRAPPER -->
-  <div id="wrapper">
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-		  <div class="brand">
-		    <a href="index.html"><img src="<?=base_url();?>admin/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
-				<!-- <h4>SMK PUSPABANGSA 2</h4> -->
-		  </div>
-		  <div class="container-fluid">
-		    <div class="navbar-btn">
-		      <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
-		    </div>
-		    <div id="navbar-menu">
-		      <ul class="nav navbar-nav navbar-right">
-		        <!-- NOTIF -->
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-		            <i class="lnr lnr-alarm"></i>
-		            <span class="badge bg-danger">5</span>
-		          </a>
-		          <ul class="dropdown-menu notifications">
-		            <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
-		            <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
-		            <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
-		            <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
-		            <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
-		            <li><a href="#" class="more">See all notifications</a></li>
-		          </ul>
-		        </li>
-		        <!-- END NOTIF -->
-		        <!-- OPTIONS -->
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?=base_url();?>admin/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-		            <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-		            <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
-		            <li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
-		          </ul>
-		        </li>
-		        <!-- END OPTIONS -->
-		      </ul>
-		    </div>
-		  </div>
-		</nav>
-		<!-- END NAVBAR -->
-		<!-- LEFT SIDEBAR -->
-		<div id="sidebar-nav" class="sidebar">
-		  <div class="sidebar-scroll">
-		    <nav>
-		      <ul class="nav">
-		        <li><a href="<?=base_url();?>admin/home" class="<?php echo ($nav == 'home' ? 'active' : '') ?>"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
-		        <li><a href="<?=base_url();?>admin/user" class="<?php echo ($nav == 'user' ? 'active' : '') ?>"><i class="lnr lnr-users"></i> <span>Data User</span></a></li>
-						<li>
-							<a href="#subAkad" data-toggle="collapse" class="collapsed <?php echo ($nav == 'guru' ? 'active' : '') ?>"><i class="fa fa-graduation-cap"></i> <span>Akademik</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subAkad" class="collapse ">
-								<ul class="nav">
-									<li><a href="<?=base_url();?>admin/guru" class="<?php echo ($nav == 'guru' ? 'active' : '') ?>"><i class="lnr lnr-user"></i> <span>Data Guru</span></a></li>
-									<li><a href="<?=base_url();?>admin/siswa/siswa" class="<?php echo ($nav == 'siswa' ? 'active' : '') ?>"><i class="lnr lnr-user"></i> <span>Data Siswa</span></a></li>
-									<li>
-										<a href="#submenu1" class="collapsed" data-toggle="collapse"><i class="fa fa-globe"></i> Siswa <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-										<div id="submenu1" class="collapse" style="margin-left:30px;">
-											<ul class="nav">
-												<?php foreach ($menu as $key => $jurusan) {  ?>
-													<li>
-														<a href="#jurusan<?=$key?>" data-toggle="collapse" class="collapsed"><?=$jurusan['name']?> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-														<div id="jurusan<?=$key?>" class="collapse" style="margin-left:30px;">
-															<ul class="nav">
-																<?php foreach ($jurusan['submenu'] as $key_kelas => $dkelas) {?>
-																	<li>
-																		<a href="<?=site_url('siswa/index/'.$key_kelas)?>"><?=$dkelas?></a>
-																	</li>
-																<?php } ?>
-															</ul>
-														</div>
-													</li>
-												<?php } ?>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<a href="#submenu2" class="collapsed" data-toggle="collapse"><i class="fa fa-globe"></i> Nilai <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-										<div id="submenu2" class="collapse" style="margin-left:30px;">
-											<ul class="nav">
-												<?php foreach ($menu as $key => $jurusan) {  ?>
-													<li>
-														<a href="#jurusan1<?=$key?>" data-toggle="collapse" class="collapsed"><?=$jurusan['name']?> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-														<div id="jurusan1<?=$key?>" class="collapse" style="margin-left:30px;">
-															<ul class="nav">
-																<?php foreach ($jurusan['submenu'] as $key_kelas => $dkelas) {?>
-																	<li>
-																		<a href="<?=site_url('nilai/index/'.$key_kelas)?>"><?=$dkelas?></a>
-																	</li>
-																<?php } ?>
-															</ul>
-														</div>
-													</li>
-												<?php } ?>
-											</ul>
-										</div>
-									</li>
-									<li><a href="<?= base_url();?>admin/jurusan" class="<?php echo ($nav == 'jurusan' ? 'active' : '') ?>"><i class="fa fa-graduation-cap"></i> <span>Jurusan</span></a>
-									<li><a href="<?= base_url();?>admin/kelas" class="<?php echo ($nav == 'kelas' ? 'active' : '') ?>"><i class="lnr lnr-apartment"></i> <span>Kelas</span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<a href="#subPages2" data-toggle="collapse" class="collapsed <?php echo ($nav == 'guru' ? 'active' : '') ?>"><i class="fa fa-globe"></i> <span>Informasi</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages2" class="collapse ">
-								<ul class="nav">
-									<li><a href="<?= base_url();?>admin/data_profil" class="<?php echo ($nav == 'data_profil' ? 'active' : '') ?>"><i class="fa fa-vcard-o"></i> <span>Data Profil</span></a></li>
-									<li><a href="<?= base_url();?>admin/berita" class="<?php echo ($nav == 'berita' ? 'active' : '') ?>"><i class="fa fa-newspaper-o"></i> <span>Berita </span></a></li>
-									<li><a href="<?= base_url();?>admin/kalender" class="<?php echo ($nav == 'kalender' ? 'active' : '') ?>"><i class="lnr lnr-calendar-full"></i> <span>Kalender Pendidikan</span></a></li>
-									<li><a href="<?= base_url();?>admin/kurikulum" class="<?php echo ($nav == 'kurikulum' ? 'active' : '') ?>"><i class="lnr lnr-calendar-full"></i> <span>Kurikulum</span></a></li>
-								</ul>
-							</div>
-						</li>
-		        <li><a href="<?= base_url();?>admin/data_beranda" class="<?php echo ($nav == 'data_beranda' ? 'active' : '') ?>"><i class="fa fa-dashboard"></i> <span>Data Beranda (Slider)</span></a></li>
-		        <li><a href="<?= base_url();?>admin/bahan_ajar" class="<?php echo ($nav == 'bahan_ajar' ? 'active' : '') ?>"><i class="fa fa-bookmark-o"></i> <span>Bahan Ajar</span></a></li>
-		        <li><a href="<?= base_url();?>admin/ekskul" class="<?php echo ($nav == 'ekskul' ? 'active' : '') ?>"><i class="fa fa-id-badge"></i> <span>Extrakulikuler</span></a></li>
-		      </ul>
-		    </nav>
-		  </div>
-		</div>
-		<!-- END LEFT SIDEBAR -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="<?= base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="<?= base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="<?= base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview"><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li class="treeview"><a href="#"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
+        <li class="treeview"><a href="#"><i class="fa fa-graduation-cap"></i> <span>Akademik</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+          <ul class="treeview-menu"><li><a href="#"><i class="fa fa-circle-o"></i> satu</a></li>
+            <li class="treeview"><a href="#"><i class="fa fa-circle-o"></i> Level dua <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Level tiga</a></li>
+          </ul>
+        </li>
+        <li class="treeview"><a href="#"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+          <ul class="treeview-menu">
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+          </ul>
+        </li>
+        <li class="treeview"><a href="#"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li>
+        <li class="treeview"><a href="#"><i class="fa fa-fax"></i> <span>Extrakulikuler</span></a></li>
+        <li class="treeview"><a href="#"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
