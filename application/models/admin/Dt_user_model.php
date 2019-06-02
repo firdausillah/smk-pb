@@ -1,6 +1,7 @@
 <?php
 
 class Dt_user_model extends CI_model{
+  var $u="user";
   public function getAllUser()
   {
     return $this->db->get('user')->result_array();
@@ -15,5 +16,9 @@ class Dt_user_model extends CI_model{
   {
     $this->db->where('id', $id);
     $this->db->delete('user');
+  }
+  public function tambah($data)
+  {
+    return $this->db->insert($this->u,$data);
   }
 }

@@ -2,13 +2,11 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Data Tables
-      <!-- <small>advanced tables</small> -->
+      Data User
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Tables</a></li>
-      <li class="active">Data tables</li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
+      <li><a href="#">Data User</a></li>
     </ol>
   </section>
 
@@ -39,7 +37,7 @@
                foreach ($users as $usr) :?>
               <tr>
                 <td><?= $no; ?></td>
-                <td><a><img height="40"></img></a></td>
+                <td><a href="<?= base_url('uploads/img/'); ?><?= $usr['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $usr['gambar']; ?>" alt="<?= $usr['username']; ?>" height="60"></img></a></td>
                 <td><?= $usr['username']; ?></td>
                 <td><?= $usr['level']; ?></td>
                 <td><?= $usr['status']; ?></td>

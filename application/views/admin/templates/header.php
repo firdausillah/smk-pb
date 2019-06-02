@@ -1,3 +1,8 @@
+<?php $nav = $nav_uri = explode('/', $_SERVER['REQUEST_URI']);
+// $nav_dok = $nav[count($nav)]
+$nav = $nav[3];
+// print_r($nav[3]);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,32 +121,32 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview"><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
-        <li class="treeview"><a href="#"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
-        <li class="treeview"><a href="#"><i class="fa fa-graduation-cap"></i> <span>Akademik</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
-          <ul class="treeview-menu"><li><a href="#"><i class="fa fa-circle-o"></i> satu</a></li>
-            <li class="treeview"><a href="#"><i class="fa fa-circle-o"></i> Level dua <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+        <li class="<?php echo ($nav == 'home' ? 'active' : '') ?> treeview"><a href="<?= base_url(); ?>admin/home"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li class="<?php echo ($nav == 'dt_user' ? 'active' : '') ?> treeview"><a href="<?= base_url(); ?>admin/dt_user"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
+        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-graduation-cap"></i> <span>Akademik</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+          <ul class="treeview-menu"><li><a href="<?= base_url(); ?>admin/dt_guru"><i class="fa fa-circle-o"></i> Data Guru</a></li>
+            <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level dua <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level Two</a></li>
               </ul>
             </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level tiga</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level tiga</a></li>
           </ul>
         </li>
-        <li class="treeview"><a href="#"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li>
-        <li class="treeview"><a href="#"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li>
-        <li class="treeview"><a href="#"><i class="fa fa-fax"></i> <span>Extrakulikuler</span></a></li>
-        <li class="treeview"><a href="#"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
+        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li>
+        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-fax"></i> <span>Extrakulikuler</span></a></li>
+        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
