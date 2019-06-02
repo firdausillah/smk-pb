@@ -44,5 +44,10 @@ $.widget.bridge('uibutton', $.ui.button);
 <script src="<?= base_url(); ?>assets/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url(); ?>assets/admin/dist/js/demo.js"></script>
+<script>
+function confirm_dialog(){
+  return confirm('Apakah anda yakin ingin menghapus data ini ?');
+}
+</script>
 </body>
 </html>
