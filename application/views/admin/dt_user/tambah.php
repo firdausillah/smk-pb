@@ -29,19 +29,19 @@
                 <div class="form-group">
                   <label for="usernamee" class="col-sm-2 control-label">Username</label>
                   <div class="col-sm-10">
-                    <input type="text" name="username" class="form-control" id="usernamee" placeholder="Username">
+                    <input type="text" name="username" class="form-control" id="usernamee" required placeholder="Username">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="password1" class="col-sm-2 control-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="password" name="password" class="form-control" id="password1" placeholder="Password">
+                    <input type="password" name="password" class="form-control" id="password1" required placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="gambar" class="col-sm-2 control-label">Foto</label>
                   <div class="col-sm-10">
-                    <input type="file" name="gambar" class="form-control" id="gambar" placeholder="Password">
+                    <input type="file" name="gambar" class="form-control" id="gambar" required placeholder="Password">
                   </div>
                 </div>
               </div>
