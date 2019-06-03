@@ -23,7 +23,9 @@ class Dt_user extends CI_Controller{
 
   public function delete($id)
   {
-    $this->Dt_user_model->deleteUser($id);
+    $data = $this->usr_mdl->getUserById(['id'=>$id])->row();
+    @unlink(FCPATH.'uploads/img'.$data->gambar);
+    if(!$this->usr_mdl->deleteUser(['id'=>$id])) exit("Delete Data Error.");
     redirect('admin/dt_user');
   }
 

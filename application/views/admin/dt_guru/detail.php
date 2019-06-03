@@ -25,27 +25,42 @@
               <tr>
                 <th>Foto</th>
                 <td>:</td>
-                <td><a href="<?= base_url('uploads/img/'); ?><?= $guru['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $guru['gambar']; ?>" alt="<?= $guru['username']; ?>" height="250"></img></a></td>
+                <td><a href="<?= base_url('uploads/img/'); ?><?= $guru['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $guru['gambar']; ?>" alt="<?= $guru['nama']; ?>" height="250"></img></a></td>
               </tr>
               <tr>
-                <th>Guru Name</th>
+                <th>NUPTK</th>
+                <td>:</td>
+                <td><?= $guru['nuptk']; ?></td>
+              </tr>
+              <tr>
+                <th>Nama Guru</th>
                 <td>:</td>
                 <td><?= $guru['nama']; ?></td>
               </tr>
               <tr>
-                <th>Password</th>
+                <th>Tanggal Lahir</th>
                 <td>:</td>
-                <td><?= $guru['pendidikan']; ?></td>
+                <td><?= $guru['tgl_lahir']; ?></td>
               </tr>
               <tr>
-                <th>Level</th>
+                <th>Alamat</th>
                 <td>:</td>
                 <td><?= $guru['alamat']; ?></td>
               </tr>
               <tr>
-                <th>Status</th>
+                <th>No HP</th>
+                <td>:</td>
+                <td><?= $guru['no_hp']; ?></td>
+              </tr>
+              <tr>
+                <th>Email</th>
                 <td>:</td>
                 <td><?= $guru['email']; ?></td>
+              </tr>
+              <tr>
+                <th>Pendidikan</th>
+                <td>:</td>
+                <td><?= $guru['pendidikan']; ?></td>
               </tr>
             </table>
           </div>

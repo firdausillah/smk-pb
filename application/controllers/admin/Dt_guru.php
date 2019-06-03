@@ -21,10 +21,12 @@ class Dt_guru extends CI_Controller{
     $this->load->view('admin/templates/footer');
   }
 
-  public function delete($nuptk)
+  public function delete($id)
   {
-    $this->Dt_guru_model->deleteGuru($nuptk);
-    redirect('admin/dt_guru');
+    $data = $this->gru_mdl->getGuruByNuptk(['nupt'=>$nuptk])->row();
+    @unlink(FCPATH.'uploads/img'.$data->gambar);
+    if(!$this->gru_mdl->deleteGuru(['nupt'=>$nuptk])) exit("Delete Data Error.");
+    redirect('admin/dt_user');
   }
 
   public function tambah()
@@ -52,12 +54,8 @@ class Dt_guru extends CI_Controller{
       else exit('Error : '.$this->upload->display_errors());
     }
 
-    if(empty($pos['nuptk'])){
-      unset($pos['nuptk']);
-      if(!$this->gru_mdl->tambah($pos)) exit('Insert Data Error.');
-    }else{
-      if(!$this->gru_mdl->update(['nuptk'=>$pos['nuptk']],$pos)) exit("Update Data Error.");
-    }
+    if(!$this->gru_mdl->tambah($pos)) exit('Insert Data Error.');
+
     redirect('admin/dt_guru');
   }
 
@@ -68,6 +66,17 @@ class Dt_guru extends CI_Controller{
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_guru/detail', $data);
+    $this->load->view('admin/templates/footer');
+  }
+
+  public function edit($nuptk)
+  {
+    $data['judul'] = 'Edit Data Guru | Admin';
+    $data['guru'] = $this->Dt_guru_model->getGuruByNuptk($nuptk);
+    if(empty($data)) redirect('admin/dt_guru');
+
+    $this->load->view('admin/templates/header', $data);
+    $this->load->view('admin/dt_guru/edit', $data);
     $this->load->view('admin/templates/footer');
   }
 }

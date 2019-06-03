@@ -17,7 +17,7 @@
         <div class="box">
           <div class="box-header">
             <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
-            <a href="<?= site_url(); ?>admin/dt_guru/tambah" class="btn btn-primary"><i class="fa fa-plus"></i> &nbsp Tambah admin </a>
+            <a href="<?= site_url(); ?>admin/dt_guru/tambah" class="btn btn-primary"><i class="fa fa-plus"></i> &nbsp Tambah Guru </a>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -38,10 +38,11 @@
                 <td><?= $no; ?></td>
                 <td><?= $gru['nuptk']; ?></td>
                 <td><?= $gru['nama']; ?></td>
-                <td><a href="<?= base_url('uploads/img/'); ?><?= $gru['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $gru['gambar']; ?>" alt="<?= $gru['username']; ?>" height="60"></img></a></td>
+                <td><a href="<?= base_url('uploads/img/'); ?><?= $gru['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $gru['gambar']; ?>" alt="<?= $gru['nama']; ?>" height="60px"></img></a></td>
                 <td>
                   <a href="<?= base_url(); ?>admin/dt_guru/detail/<?= $gru['nuptk']; ?>" class="fa fa-eye btn btn-primary"></a>
                   <a href="<?= base_url(); ?>admin/dt_guru/delete/<?= $gru['nuptk']; ?>" class="fa fa-trash btn btn-danger" onclick="return confirm_dialog();"></a>
+                  <a href="<?= base_url(); ?>admin/dt_guru/edit/<?= $gru['nuptk']; ?>" class="fa fa-pencil btn btn-warning"></a>
                 </td>
               </tr>
             <?php $no++;
