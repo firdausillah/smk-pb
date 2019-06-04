@@ -21,12 +21,16 @@ class Dt_guru extends CI_Controller{
     $this->load->view('admin/templates/footer');
   }
 
-  public function delete($id)
+  public function delete($nuptk)
   {
-    $data = $this->gru_mdl->getGuruByNuptk(['nupt'=>$nuptk])->row();
+    $data = $this->gru_mdl->getToDelete(['nuptk'=>$nuptk])->row();
     @unlink(FCPATH.'uploads/img'.$data->gambar);
-    if(!$this->gru_mdl->deleteGuru(['nupt'=>$nuptk])) exit("Delete Data Error.");
-    redirect('admin/dt_user');
+    if($this->gru_mdl->delete(['nuptk'=>$nuptk])){
+      $this->session->set_flashdata('info','Data Behasil Dihapus !');
+      redirect('admin/dt_guru');
+    } else{
+       exit("Delete Data Error.");
+    }
   }
 
   public function tambah()
@@ -54,9 +58,12 @@ class Dt_guru extends CI_Controller{
       else exit('Error : '.$this->upload->display_errors());
     }
 
-    if(!$this->gru_mdl->tambah($pos)) exit('Insert Data Error.');
-
-    redirect('admin/dt_guru');
+    if($this->gru_mdl->tambah($pos)){
+      $this->session->set_flashdata('info','Data Behasil Ditambah !');
+      redirect('admin/dt_guru');
+    }else {
+      exit('Insert Data Error.');
+    }
   }
 
   public function detail($nuptk)
@@ -78,5 +85,25 @@ class Dt_guru extends CI_Controller{
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_guru/edit', $data);
     $this->load->view('admin/templates/footer');
+  }
+
+  public function save_edit($nuptk)
+  {
+    $nuptk	= $this->input->post('nuptk');
+    $data = array (
+      'nuptk'	            => $this->input->post('nuptk'),
+      'nama'  	=> $this->input->post('nama'),
+      'no_hp'	  	=> $this->input->post('no_hp'),
+      'email'	  	=> $this->input->post('email'),
+      'alamat'		=> $this->input->post('alamat'),
+      'pendidikan'		=> $this->input->post('pendidikan'),
+      'tgl_lahir'		=> $this->input->post('tgl_lahir')
+    );
+    $this->db->where('nuptk',$nuptk);
+    $this->db->update('guru',$data);
+    if ($this->db->affected_rows()){
+      $this->session->set_flashdata('info','Data Behasil Diupdate !');
+      redirect('admin/dt_guru');
+    }
   }
 }

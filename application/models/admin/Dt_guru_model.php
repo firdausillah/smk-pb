@@ -10,11 +10,15 @@ class Dt_guru_model extends CI_model{
   {
     return $this->db->get_where('guru', ['nuptk' => $nuptk])->row_array();
   }
-  public function deleteGuru($nuptk)
+  public function getToDelete($nuptk)
   {
-    $this->db->where('nuptk', $nuptk);
-    $this->db->delete('guru');
+    $this->db->where($nuptk);
+    return $this->db->get($this->u);
   }
+  function delete($nuptk){
+ 		$this->db->where($nuptk);
+ 		return $this->db->delete($this->u);
+ 	}
   public function tambah($data)
   {
     return $this->db->insert($this->u,$data);

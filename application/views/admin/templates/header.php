@@ -121,17 +121,25 @@ $nav = $nav[3];
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="<?php echo ($nav == 'home' ? 'active' : '') ?> treeview"><a href="<?= base_url(); ?>admin/home"><i class="fa fa-home"></i> <span>Home</span></a></li>
-        <li class="<?php echo ($nav == 'dt_user' ? 'active' : '') ?> treeview"><a href="<?= base_url(); ?>admin/dt_user"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
-        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-graduation-cap"></i> <span>Akademik</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+        <li class="<?php echo ($nav == 'home' ? 'active' : '') ?>"><a href="<?= base_url(); ?>admin/home"><i class="fa fa-home  treeview"></i> <span>Home</span></a></li>
+        <li class="<?php echo ($nav == 'dt_user' ? 'active' : '') ?> "><a href="<?= base_url(); ?>admin/dt_user"><i class="fa fa-users treeview"></i> <span>Data Users</span></a></li>
+        <li class="treeview"><a href="#"><i class="fa fa-graduation-cap"></i> <span>Akademik</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu"><li><a href="<?= base_url(); ?>admin/dt_guru"><i class="fa fa-circle-o"></i> Data Guru</a></li>
-            <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level dua <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+            <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Data Siswa <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+              <?php foreach ($menu as $key => $jurusan) : ?>
               <ul class="treeview-menu">
-                <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li class="treeview"><a href="jurusan<?=$key?>"><i class="fa fa-circle-o"></i> <?= $jurusan['name']; ?> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                  <?php foreach ($jurusan['submenu'] as $key_kelas => $dkelas) : ?>
+                  <ul class="treeview-menu" id="jurusan<?=$key?>">
+                    <li><a href="<?=site_url('siswa/index/'.$key_kelas)?>"><i class="fa fa-circle-o"></i> kelas <?= $dkelas ?></a></li>
+                  </ul>
+                <?php endforeach; ?>
+                </li>
               </ul>
+            <?php endforeach; ?>
             </li>
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Level tiga</a></li>
+            <li><a href="<?= base_url(); ?>admin/jurusan"><i class="fa fa-circle-o"></i> Jurusan</a></li>
+            <li><a href="<?= base_url(); ?>admin/kelas"><i class="fa fa-circle-o"></i> Kelas</a></li>
           </ul>
         </li>
         <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>

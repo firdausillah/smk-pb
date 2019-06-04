@@ -2,11 +2,11 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Data Guru
+      Data Kelas
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-      <li><a href="#">Data Guru</a></li>
+      <li><a href="#">Data Kelas</a></li>
     </ol>
   </section>
 
@@ -17,7 +17,7 @@
         <div class="box">
           <div class="box-header">
             <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
-            <a href="<?= site_url(); ?>admin/dt_guru/tambah" class="btn btn-primary"><i class="fa fa-plus"></i> &nbsp Tambah Guru </a>
+            <a href="<?= site_url(); ?>admin/kelas/tambah" class="btn btn-primary"><i class="fa fa-plus"></i> &nbsp Tambah Guru </a>
           </div>
           <!--.info -->
           <?php if($this->session->flashdata('info')): ?>
@@ -32,24 +32,21 @@
               <thead>
               <tr>
                 <th>No</th>
-                <th>NUPTK</th>
-                <th>Nama Guru</th>
-                <th>Foto</th>
+                <th>Kode Kelas</th>
+                <th>Kelas</th>
                 <th>Action</th>
               </tr>
               </thead>
               <tbody>
               <?php $no=1;
-               foreach ($guru as $gru) :?>
+               foreach ($kelas as $kls) :?>
               <tr>
                 <td><?= $no; ?></td>
-                <td><?= $gru['nuptk']; ?></td>
-                <td><?= $gru['nama']; ?></td>
-                <td><a href="<?= base_url('uploads/img/'); ?><?= $gru['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $gru['gambar']; ?>" alt="<?= $gru['nama']; ?>" height="60px"></img></a></td>
+                <td><?= $kls['kd_kelas']; ?></td>
+                <td><?= $kls['kelas']; ?> <?= $kls['jurusan']; ?> <?= $kls['golongan']; ?></td>
                 <td>
-                  <a href="<?= base_url(); ?>admin/dt_guru/detail/<?= $gru['nuptk']; ?>" class="fa fa-eye btn btn-primary"></a>
-                  <a href="<?= base_url(); ?>admin/dt_guru/delete/<?= $gru['nuptk']; ?>" class="fa fa-trash btn btn-danger" onclick="return confirm_dialog();"></a>
-                  <a href="<?= base_url(); ?>admin/dt_guru/edit/<?= $gru['nuptk']; ?>" class="fa fa-pencil btn btn-warning"></a>
+                  <a href="<?= base_url(); ?>admin/kelas/delete/<?= $kls['kd_kelas']; ?>" class="fa fa-trash btn btn-danger" onclick="return confirm_dialog();"></a>
+                  <a href="<?= base_url(); ?>admin/kelas/edit/<?= $kls['kd_kelas']; ?>" class="fa fa-pencil btn btn-warning"></a>
                 </td>
               </tr>
             <?php $no++;
