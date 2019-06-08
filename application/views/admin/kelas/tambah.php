@@ -2,12 +2,12 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Data Guru
+      Data Kelas
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-      <li><a href="#">Data Guru</a></li>
-      <li class="active">Tambah Guru</li>
+      <li><a href="#">Data Kelas</a></li>
+      <li class="active">Tambah Data Kelas</li>
     </ol>
   </section>
 
@@ -17,58 +17,38 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <a href="<?= site_url()?>admin/dt_guru" class="btn btn-info"><i class="fa fa-arrow-left"> &nbsp </i>Kembali</a>
+            <a href="<?= site_url()?>admin/kelas" class="btn btn-info"><i class="fa fa-arrow-left"> &nbsp </i>Kembali</a>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <?= form_open_multipart('admin/dt_guru/save', array('class'=>'form-horizontal')); ?>
+            <?= form_open_multipart('admin/kelas/save', array('class'=>'form-horizontal')); ?>
               <div class="box-body">
                 <div class="form-group">
-                  <label for="nuptk" class="col-sm-2 control-label">NUPTK</label>
+                  <label for="kd_kelas" class="col-sm-2 control-label">Kode Kelas</label>
                   <div class="col-sm-10">
-                    <input type="number" name="nuptk" class="form-control" id="nuptk" required placeholder="NUPTK">
+                    <input type="text" name="kd_kelas" class="form-control" id="kd_kelas" required placeholder="Kode Kelas">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="nama" class="col-sm-2 control-label">Nama Guru</label>
+                  <label for="kelas" class="col-sm-2 control-label">Kelas</label>
                   <div class="col-sm-10">
-                    <input type="text" name="nama" class="form-control" id="nama" required placeholder="Nama Guru">
+                    <input type="text" name="kelas" class="form-control" id="kelas" required placeholder="Kelas">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="gambar" class="col-sm-2 control-label">Foto</label>
+                  <label for="golongan" class="col-sm-2 control-label">Golongan</label>
                   <div class="col-sm-10">
-                    <input type="file" name="gambar" class="form-control" id="gambar" required placeholder="Foto Guru">
+                    <input type="number" name="golongan" class="form-control" id="golongan" required placeholder="Golongan">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="tgl_lahir" class="col-sm-2 control-label">Tanggal Lahir</label>
+                  <label for="id_jurusan" class="col-sm-2 control-label">Jurusan</label>
                   <div class="col-sm-10">
-                    <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" required placeholder="">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="alamat" class="col-sm-2 control-label">Alamat</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="alamat" class="form-control" id="alamat" required placeholder="Alamat">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="no_hp" class="col-sm-2 control-label">Nomor HP</label>
-                  <div class="col-sm-10">
-                    <input type="number" name="no_hp" class="form-control" id="no_hp" required placeholder="Nomor HP">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="email" class="col-sm-2 control-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" name="email" class="form-control" id="email" required placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="pendidikan" class="col-sm-2 control-label">Pendidikan</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="pendidikan" class="form-control" id="pendidikan" required placeholder="Pendidikan Terakhir">
+                    <select class="form-control" name="id_jurusan">
+                      <?php foreach ($kelas as $kls) :?>
+                      <option value="<?= $kls['id_jurusan']; ?>"><?= $kls['jurusan']; ?></option>
+                    <?php endforeach; ?>
+                    </select>
                   </div>
                 </div>
               </div>

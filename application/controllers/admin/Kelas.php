@@ -29,4 +29,40 @@ class Kelas extends CI_Controller{
     $this->load->view('admin/kelas/edit', $data);
     $this->load->view('admin/templates/footer');
   }
+  public function tambah()
+  {
+    $data['judul'] = 'Tambah Data Kelas | Admin';
+    $data['kelas'] = $this->Kelas_model->getAllKelas();
+
+    $this->load->view('admin/templates/header', $data);
+    $this->load->view('admin/kelas/tambah', $data);
+    $this->load->view('admin/templates/footer');
+  }
+  public function save()
+  {
+    $pos = $_POST;
+    if($this->kls_mdl->tambah($pos)){
+      $this->session->set_flashdata('info','Data Behasil Ditambah !');
+      redirect('admin/kelas');
+    }else {
+      exit('Insert Data Error.');
+    }
+  }
+  public function save_edit($kd_kelas)
+  {
+    $kd_kelas	= $this->input->post('kd_kelas');
+    $data = $_POST;
+    $this->db->where('kd_kelas',$kd_kelas);
+    $this->db->update('kelas',$data);
+    if ($this->db->affected_rows()){
+      $this->session->set_flashdata('info','Data Behasil Diupdate !');
+      redirect('admin/kelas');
+    }
+  }
+  public function delete($kd_kelas)
+  {
+    $this->Kelas_model->delete($kd_kelas);
+    $this->session->set_flashdata('flash', 'Dihapus');
+    redirect('admin/kelas');
+  }
 }

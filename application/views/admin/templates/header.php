@@ -126,8 +126,8 @@ $nav = $nav[3];
         <li class="treeview"><a href="#"><i class="fa fa-graduation-cap"></i> <span>Akademik</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu"><li><a href="<?= base_url(); ?>admin/dt_guru"><i class="fa fa-circle-o"></i> Data Guru</a></li>
             <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Data Siswa <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
-              <?php foreach ($menu as $key => $jurusan) : ?>
               <ul class="treeview-menu">
+              <?php foreach ($menu as $key => $jurusan) : ?>
                 <li class="treeview"><a href="jurusan<?=$key?>"><i class="fa fa-circle-o"></i> <?= $jurusan['name']; ?> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                   <?php foreach ($jurusan['submenu'] as $key_kelas => $dkelas) : ?>
                   <ul class="treeview-menu" id="jurusan<?=$key?>">
@@ -135,8 +135,8 @@ $nav = $nav[3];
                   </ul>
                 <?php endforeach; ?>
                 </li>
+              <?php endforeach; ?>
               </ul>
-            <?php endforeach; ?>
             </li>
             <li><a href="<?= base_url(); ?>admin/jurusan"><i class="fa fa-circle-o"></i> Jurusan</a></li>
             <li><a href="<?= base_url(); ?>admin/kelas"><i class="fa fa-circle-o"></i> Kelas</a></li>
@@ -144,12 +144,10 @@ $nav = $nav[3];
         </li>
         <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu">
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="<?= base_url(); ?>admin/"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a href="<?= base_url(); ?>admin/profil"><i class="fa fa-circle-o"></i> Data Profil</a></li>
+            <li><a href="<?= base_url(); ?>admin/berita"><i class="fa fa-circle-o"></i> Berita</a></li>
+            <li><a href="<?= base_url(); ?>admin/kalender"><i class="fa fa-circle-o"></i> Kalender Pendidikan</a></li>
+            <li><a href="<?= base_url(); ?>admin/kurikulum"><i class="fa fa-circle-o"></i> Kurikulum</a></li>
           </ul>
         </li>
         <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li>

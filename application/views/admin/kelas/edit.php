@@ -21,12 +21,12 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <form class="" action="" method="post">
+            <?= form_open_multipart('admin/kelas/save_edit', array('class'=>'form-horizontal')); ?>
               <div class="box-body">
                 <div class="form-group">
                   <label for="kd_kelas" class="col-sm-2 control-label">Kode Kelas</label>
                   <div class="col-sm-10">
-                    <input type="text" name="kd_kelas" class="form-control" id="kd_kelas" required value="<?= $kelas['kd_kelas']; ?>"placeholder="Kode Kelas">
+                    <text id="kd_kelas" class="col-sm-2 control-label"><?= $kelas['kd_kelas']; ?></text>
                   </div>
                 </div>
                 <div class="form-group">
@@ -42,13 +42,9 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="id_jurusan" class="col-sm-2 control-label">Jurusan</label>
+                  <label for="id_jurusan" class="col-sm-2 control-label">ID Jurusan</label>
                   <div class="col-sm-10">
-                    <select class="form-control" name="id_jurusan">
-                      <?php foreach ($kelas as $kls) :?>
-                      <option value="<? $kls['jurusan']; ?>"><? $kls['jurusan']; ?></option>
-                    <?php endforeach; ?>
-                    </select>
+                    <text id="id_jurusan" class="col-sm-2 control-label"><?= $kelas['id_jurusan']; ?></text>
                   </div>
                 </div>
               </div>
