@@ -144,7 +144,7 @@ $nav = $nav[3];
         </li>
         <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu">
-            <li><a href="<?= base_url(); ?>admin/profil"><i class="fa fa-circle-o"></i> Data Profil</a></li>
+            <!-- <li><a href="<?= base_url(); ?>admin/profil"><i class="fa fa-circle-o"></i> Data Profil</a></li> -->
             <li><a href="<?= base_url(); ?>admin/berita"><i class="fa fa-circle-o"></i> Berita</a></li>
             <li><a href="<?= base_url(); ?>admin/kalender"><i class="fa fa-circle-o"></i> Kalender Pendidikan</a></li>
             <li><a href="<?= base_url(); ?>admin/kurikulum"><i class="fa fa-circle-o"></i> Kurikulum</a></li>

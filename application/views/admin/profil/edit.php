@@ -25,9 +25,9 @@
             <input type="hidden" name="id" value="<?= $profil['id']; ?>">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="profil" class="col-sm-2 control-label">Profil</label>
+                  <label for="profil" class="col-sm-2 control-label">Visi</label>
                   <div class="col-sm-10">
-                    <?php echo form_textarea('isi_artikel',$artikel['isi_artikel'],array('id'=>'editor1','class'=>'editor1')); ?>
+                    <?php echo form_textarea('visi',$profil['visi'],array('id'=>'editor1','class'=>'editor1')); ?>
                   </div>
                 </div>
               </div>
