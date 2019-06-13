@@ -22,7 +22,7 @@
           <!-- /.box-header -->
           <div class="box-body">
             <?= form_open_multipart('admin/berita/save_edit', array('class'=>'form-horizontal')); ?>
-            <?php echo form_hidden('id') ?>
+            <input type="hidden" name="id" value="<?= $berita['id']; ?>">
             <input type="hidden" name="tanggal" value="">
               <div class="box-body">
                 <div class="form-group">

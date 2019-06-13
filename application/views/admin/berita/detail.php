@@ -40,7 +40,7 @@
               <tr>
                 <th>Tanggal</th>
                 <td>:</td>
-                <td><?= $berita['tanggal']; ?></td>
+                <td><?= $berita["tanggal"]; ?></td>
               </tr>
             </table>
           </div>

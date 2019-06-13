@@ -23,7 +23,7 @@
           <div class="box-body">
             <?= form_open_multipart('admin/berita/save', array('class'=>'form-horizontal')); ?>
             <?php echo form_hidden('id') ?>
-            <input type="hidden" name="tanggal" value="">
+            <input type="hidden" name="tanggal" value="<?= date('Y-m-d H:i:s'); ?>">
               <div class="box-body">
                 <div class="form-group">
                   <label for="judul_berita" class="col-sm-2 control-label">Judul Berita</label>
