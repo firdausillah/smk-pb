@@ -72,9 +72,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   								</a>
   								<div class="dropdown-menu" aria-labelledby="navbarDropdownprofil">
   									<a class="dropdown-item" href="#"></a>
-  									<a class="dropdown-item" href="profil">Visi, Misi, Dan Tujuan Sekolah</a>
+  									<a class="dropdown-item" href="<?= site_url();?>profil">Visi, Misi, Dan Tujuan Sekolah</a>
   									<div class="dropdown-divider"></div>
-  									<a class="dropdown-item" href="profil/guru">Guru dan Tenaga Kependidikan</a>
+  									<a class="dropdown-item" href="<?= site_url();?>profil/guru">Guru dan Tenaga Kependidikan</a>
   									<div class="dropdown-divider"></div>
   									<a class="dropdown-item" href="<?= site_url();?>">Profil Umum</a>
   									<div class="dropdown-divider"></div>

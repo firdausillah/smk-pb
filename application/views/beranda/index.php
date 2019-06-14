@@ -13,13 +13,13 @@
 		    </ol>
 		    <div class="carousel-inner">
 					<!-- loop data -->
-		      <div class="carousel-item active">
-		        <img src="<?= base_url(); ?>admin/upload/gambar/1.jpg"  class="d-block w-100" alt="...">
+		      <!-- <div class="carousel-item active">
+		        <img src="<?= base_url(); ?>uploads/img/slider/<?= $beranda['gambar']; ?>"  class="d-block w-100" alt="...">
 		        <div class="carousel-caption d-none d-md-block">
 		          <h4>First slide label</h4>
 		          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 		        </div>
-		      </div>
+		      </div> -->
 					<!-- endloop -->
 		      <div class="carousel-item">
 		        <img src="<?= base_url(); ?>admin/upload/gambar/2.jpg"  class="d-block w-100" alt="...">
@@ -91,13 +91,13 @@
 								if ($no!=4) {?>
 									<div class="blog-grids row mb-3 <?= $no ?>">
 										<div class="col-md-5 blog-grid-left <?= $no ?>">
-											<a href="<?= site_url(); ?>berita/berita/<?= $brt['id_berita']; ?>">
-												<img src="<?= base_url('admin/upload/berita/'.$brt['gambar']) ?>" class="img-fluid" alt="">
+											<a href="<?= site_url(); ?>berita/berita/<?= $brt['id']; ?>">
+												<img src="<?= base_url('uploads/img/berita/'.$brt['gambar']) ?>" class="img-fluid" alt="">
 											</a>
 										</div>
 										<div class="col-md-7 blog-grid-right <?= $no ?>">
 											<h5>
-												<a href="<?= site_url(); ?>berita/berita/<?= $brt['id_berita']; ?>"><?= $brt['judul_berita']; ?> </a>
+												<a href="<?= site_url(); ?>berita/berita/<?= $brt['id']; ?>"><?= $brt['judul_berita']; ?> </a>
 											</h5>
 											<div class="sub-meta <?= $no ?>">
 												<span>

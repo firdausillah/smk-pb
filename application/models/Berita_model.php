@@ -11,9 +11,9 @@ class Berita_model extends CI_model{
 		return $this->db->get('berita')->result_array();
 	}
 
-  public function getDetail($id_berita)
+  public function getDetail($id)
   {
-    return $this->db->get_where('berita', ['id_berita' => $id_berita])->row_array();
+    return $this->db->get_where('berita', ['id' => $id])->row_array();
   }
 
 }

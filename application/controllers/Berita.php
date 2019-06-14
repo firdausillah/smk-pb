@@ -15,7 +15,7 @@ class Berita extends CI_Controller {
   {
     $data['judul'] = 'Berita | SMK Puspabangsa 2 Siliragung';
     $data['berita'] = $this->Berita_model->getAllBerita();
-    // $data['detail'] = $this->Berita_model->getDetail('$id_berita');
+    // $data['detail'] = $this->Berita_model->getDetail('$id');
     $config['base_url'] = site_url('berita/index');
     $config['total_rows'] = $this->db->count_all('berita');
     $config['per_page']         = 2;
@@ -53,10 +53,10 @@ class Berita extends CI_Controller {
     $this->load->view('berita/index', $data);
     $this->load->view('templates/footer');
   }
-  public function detailberita($id_berita)
+  public function detailberita($id)
   {
     $data['judul'] = 'Berita | SMK Puspabangsa 2 Siliragung';
-    $data['detail'] = $this->Berita_model->getDetail($id_berita);
+    $data['detail'] = $this->Berita_model->getDetail($id);
     $data['berita'] = $this->Berita_model->getAllBerita();
 
     $this->load->view('templates/header', $data);

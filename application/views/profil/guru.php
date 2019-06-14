@@ -22,7 +22,7 @@
               <?php foreach( $guru as $gru ) :?>
               <div class="col-lg-3 col-md-4 col-sm-8">
                 <a href="exampleModal" class="d-block mb-4 h-100 modalDetail" name="gru" data-nuptk="<?= $gru['nuptk']; ?>" data-toggle="modal" data-target="#exampleModal" >
-                  <img class="img-fluid img-thumbnail" src="<?= base_url(); ?>admin/upload/guru/<?= $gru['gambar'] ?>" alt="">
+                  <img class="img-fluid img-thumbnail" src="<?= base_url(); ?>uploads/img/<?= $gru['gambar']; ?>" alt="">
                 </a>
               </div>
             <?php endforeach ?>
@@ -37,7 +37,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img id="gambar" class="img-responsive col-md-12" src="<?= base_url(); ?>admin/upload/guru/<?= $detail['gambar']; ?>">
+                    <img id="gambar" class="img-responsive col-md-12" src="<?= base_url(); ?>uploads/img/<?= $detail['gambar']; ?>">
                     <h5 id="nama"></h5>
                     <p id="email"></p>
                     <p id="pendidikan"></p>
