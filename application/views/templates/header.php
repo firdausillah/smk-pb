@@ -37,8 +37,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   		<div class="top-bar_sub_w3layouts container-fluid">
   			<div class="row">
   				<div class="col-md-4 logo text-left">
-  					<a class="navbar-brand" href="#" >
-  						<img src="<?= base_url(); ?>assets/img/logo1.png" class="img-responsive" height="60" alt=""></a>
+  					<a class="navbar-brand logo" href="#" >
+  						<!-- <img src="<?= base_url(); ?>assets/img/logo1.png" class="img-responsive responlogo" height="60" alt=""></a>
+							<a href="index2.html" class="logo"> -->
+								<!-- mini logo for sidebar mini 50x50 pixels -->
+								<span class="logo-mini"><b>A</b>LT</span>
+								<!-- logo for regular state and mobile devices -->
+								<span class="logo-lg"><b>Admin</b>LTE</span>
+							</a>
   				</div>
   				<div class="col-md-8 top-forms text-right mt-lg-3 mt-md-1 mt-0">
   					<span>Selamat Datang !</span>

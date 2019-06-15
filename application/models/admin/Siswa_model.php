@@ -1,7 +1,7 @@
 <?php
 
-
 class Siswa_model extends CI_Model{
+  var $u="siswa";
   public function getAllJurusan()
   {
     return $this->db->get('Jurusan')->result_array();
@@ -9,6 +9,10 @@ class Siswa_model extends CI_Model{
   public function getAllSiswa()
   {
     return $this->db->get('siswa')->result_array();
+  }
+  public function getSiswaBy($nipd)
+  {
+    return $this->db->get_where('siswa', ['nipd' => $nipd])->row_array();
   }
   public function getAllKelas()
   {
@@ -29,5 +33,21 @@ class Siswa_model extends CI_Model{
     }
     return $menu;
   }
-
+  public function getToDelete($nipd)
+  {
+    $this->db->where($nipd);
+    return $this->db->get($this->u);
+  }
+  function delete($nipd){
+    $this->db->where($nipd);
+    return $this->db->delete($this->u);
+  }
+  public function tambah($data)
+  {
+    return $this->db->insert($this->u,$data);
+  }
+  function update($nipd,$data){
+    $this->db->where($nipd);
+    return $this->db->update($this->u,$data);
+  }
 }
