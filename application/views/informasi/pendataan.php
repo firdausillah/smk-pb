@@ -33,7 +33,7 @@
           <div class="contct-info">
             <h4>Belum Pernah Daftar ?</h4>
             <br>
-            <?=form_open_multipart('Ppdb/save')?>
+            <?=form_open_multipart('Informasi/save')?>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">

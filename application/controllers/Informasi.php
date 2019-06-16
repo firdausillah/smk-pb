@@ -75,7 +75,7 @@ class Informasi extends CI_Controller {
 		$pos = $_POST; // ambil semua data yang di kirim kecuali data file
 		if(!empty($_FILES['gambar']['name'])){ // $_FILES untuk mengambil data gambar
 			$cfg = [
-				'upload_path' => './admin/upload/siswa',
+				'upload_path' => './uploads/img',
 				'allowed_types' => 'gif|jpg|png',
 				'overwrite' => (empty($pos['gambar'])?FALSE:TRUE)
 			];
