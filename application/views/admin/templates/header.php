@@ -138,6 +138,19 @@ $nav = $nav[3];
               <?php endforeach; ?>
               </ul>
             </li>
+            <li class="treeview"><a href="<?= base_url(); ?>admin/nilai"><i class="fa fa-circle-o"></i> Data Nilai Siswa <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+              <ul class="treeview-menu">
+              <?php foreach ($menu as $key => $jurusan) : ?>
+                <li class="treeview"><a href="ajurusan<?=$key?>"><i class="fa fa-circle-o"></i> <?= $jurusan['name']; ?> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                  <?php foreach ($jurusan['submenu'] as $key_kelas => $dkelas) : ?>
+                  <ul class="treeview-menu" id="ajurusan<?=$key?>">
+                    <li><a href="<?=site_url('admin/nilai/index/'.$key_kelas)?>"><i class="fa fa-circle-o"></i> kelas <?= $dkelas ?></a></li>
+                  </ul>
+                <?php endforeach; ?>
+                </li>
+              <?php endforeach; ?>
+              </ul>
+            </li>
             <li><a href="<?= base_url(); ?>admin/jurusan"><i class="fa fa-circle-o"></i> Jurusan</a></li>
             <li><a href="<?= base_url(); ?>admin/kelas"><i class="fa fa-circle-o"></i> Kelas</a></li>
           </ul>
