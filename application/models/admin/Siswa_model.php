@@ -14,6 +14,10 @@ class Siswa_model extends CI_Model{
   {
     return $this->db->get_where('siswa', ['nipd' => $nipd])->row_array();
   }
+  public function getSiswaByKelas($kd_kelas)
+  {
+    return $this->db->get_where('siswa', ['kd_kelas' => $kd_kelas])->result_array();
+  }
   public function getAllKelas()
   {
     return $this->db->get('kelas')->result_array();

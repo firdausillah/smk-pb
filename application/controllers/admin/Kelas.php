@@ -7,6 +7,7 @@ class Kelas extends CI_Controller{
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->model('admin/Kelas_model');
+    $this->load->model('admin/Siswa_model');
     $this->load->helper('form');
     $this->load->model('Kelas_model','kls_mdl');
   }
@@ -15,6 +16,8 @@ class Kelas extends CI_Controller{
   {
     $data['judul'] = 'Data Kelas | Admin';
     $data['kelas'] = $this->Kelas_model->getAllKelas();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/kelas/index', $data);
@@ -24,6 +27,9 @@ class Kelas extends CI_Controller{
   {
     $data['judul'] = 'Edit Data Kelas | Admin';
     $data['kelas'] = $this->Kelas_model->getById($kd_kelas);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/kelas/edit', $data);
@@ -33,6 +39,8 @@ class Kelas extends CI_Controller{
   {
     $data['judul'] = 'Tambah Data Kelas | Admin';
     $data['kelas'] = $this->Kelas_model->getAllKelas();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/kelas/tambah', $data);

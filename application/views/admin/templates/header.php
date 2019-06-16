@@ -131,7 +131,7 @@ $nav = $nav[3];
                 <li class="treeview"><a href="jurusan<?=$key?>"><i class="fa fa-circle-o"></i> <?= $jurusan['name']; ?> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                   <?php foreach ($jurusan['submenu'] as $key_kelas => $dkelas) : ?>
                   <ul class="treeview-menu" id="jurusan<?=$key?>">
-                    <li><a href="<?=site_url('siswa/index/'.$key_kelas)?>"><i class="fa fa-circle-o"></i> kelas <?= $dkelas ?></a></li>
+                    <li><a href="<?=site_url('admin/siswa/index/'.$key_kelas)?>"><i class="fa fa-circle-o"></i> kelas <?= $dkelas ?></a></li>
                   </ul>
                 <?php endforeach; ?>
                 </li>
@@ -142,7 +142,7 @@ $nav = $nav[3];
             <li><a href="<?= base_url(); ?>admin/kelas"><i class="fa fa-circle-o"></i> Kelas</a></li>
           </ul>
         </li>
-        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+        <li class="treeview"><a href="#"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu">
             <!-- <li><a href="<?= base_url(); ?>admin/profil"><i class="fa fa-circle-o"></i> Data Profil</a></li> -->
             <li><a href="<?= base_url(); ?>admin/berita"><i class="fa fa-circle-o"></i> Berita</a></li>

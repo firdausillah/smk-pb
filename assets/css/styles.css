@@ -1,0 +1,7 @@
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) {
+ .responlogo{
+	 height: 60px;
+ }
+}

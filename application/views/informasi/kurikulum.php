@@ -20,9 +20,9 @@
           <div class=" left-blog-info-w3layouts-agileits text-left">
           <!-- <div class="jumbotron"> -->
             <div class="container-fluid bg-light">
-              <h1 class="font-weight-light text-center text-sm-left mt-4 mb-0"><?= $klm['file_kurikulum']; ?></h1>
+              <h1 class="font-weight-light text-center text-sm-left mt-4 mb-0"><?= $klm['judul']; ?></h1>
               <hr class="mt-2 mb-2">
-              <embed src="<?= base_url() ?>admin/upload/kurikulum/<?= $klm['judul']; ?>" width="100%" height="400"> </embed>
+              <embed src="<?= base_url() ?>uploads/file/kurikulum/<?= $klm['file_kurikulum']; ?>" width="100%" height="400"> </embed>
             </div>
   				</div>
         <?php endforeach; ?>

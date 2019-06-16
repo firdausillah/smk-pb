@@ -5,6 +5,7 @@ class Dt_guru extends CI_Controller{
   public function __construct(){
     parent::__construct();
     $this->load->model('admin/Dt_guru_model');
+    $this->load->model('admin/Siswa_model');
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->helper('form');
@@ -15,6 +16,9 @@ class Dt_guru extends CI_Controller{
   {
     $data['judul'] = 'Data Guru | Admin';
     $data['guru'] = $this->Dt_guru_model->getAllGuru();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_guru/index', $data);
@@ -36,6 +40,9 @@ class Dt_guru extends CI_Controller{
   public function tambah()
   {
     $data['judul'] = 'Tambah Guru | Admin';
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_guru/tambah', $data);
@@ -70,6 +77,9 @@ class Dt_guru extends CI_Controller{
   {
     $data['judul'] = 'Detail Data Guru | Admin';
     $data['guru'] = $this->Dt_guru_model->getGuruByNuptk($nuptk);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_guru/detail', $data);
@@ -80,6 +90,9 @@ class Dt_guru extends CI_Controller{
   {
     $data['judul'] = 'Edit Data Guru | Admin';
     $data['guru'] = $this->Dt_guru_model->getGuruByNuptk($nuptk);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
     if(empty($data)) redirect('admin/dt_guru');
 
     $this->load->view('admin/templates/header', $data);

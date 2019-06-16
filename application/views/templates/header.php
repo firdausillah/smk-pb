@@ -25,6 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="<?= base_url(); ?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/jquery.desoslide.css">
 	<link href="<?= base_url(); ?>assets/css/style.css" rel='stylesheet' type='text/css' />
+	<link href="<?= base_url(); ?>assets/css/styles.css" rel='stylesheet' type='text/css' />
 	<link href="<?= base_url(); ?>assets/css/fontawesome-all.css" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
 	    rel="stylesheet">
@@ -38,12 +39,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   			<div class="row">
   				<div class="col-md-4 logo text-left">
   					<a class="navbar-brand logo" href="#" >
-  						<!-- <img src="<?= base_url(); ?>assets/img/logo1.png" class="img-responsive responlogo" height="60" alt=""></a>
-							<a href="index2.html" class="logo"> -->
-								<!-- mini logo for sidebar mini 50x50 pixels -->
-								<span class="logo-mini"><b>A</b>LT</span>
-								<!-- logo for regular state and mobile devices -->
-								<span class="logo-lg"><b>Admin</b>LTE</span>
+  						<img src="<?= base_url(); ?>assets/img/logo1.png" class="img-responsive responlogo" height="37" alt=""></a>
+							<a href="index2.html" class="logo">
 							</a>
   				</div>
   				<div class="col-md-8 top-forms text-right mt-lg-3 mt-md-1 mt-0">

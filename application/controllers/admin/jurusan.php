@@ -7,6 +7,7 @@ class Jurusan extends CI_Controller{
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->model('admin/Jurusan_model');
+    $this->load->model('admin/Siswa_model');
     $this->load->helper('form');
     $this->load->model('Jurusan_model','jr_mdl');
   }
@@ -15,6 +16,9 @@ class Jurusan extends CI_Controller{
   {
     $data['judul'] = 'Data Jurusan | Admin';
     $data['jurusan'] = $this->Jurusan_model->getAll();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/jurusan/index', $data);
@@ -24,6 +28,9 @@ class Jurusan extends CI_Controller{
   {
     $data['judul'] = 'Edit Data Jurusan | Admin';
     $data['jurusan'] = $this->Jurusan_model->getById($id_jurusan);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/jurusan/edit', $data);
@@ -33,6 +40,9 @@ class Jurusan extends CI_Controller{
   {
     $data['judul'] = 'Tambah Data Jurusan | Admin';
     $data['jurusan'] = $this->Jurusan_model->getAll();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/jurusan/tambah', $data);

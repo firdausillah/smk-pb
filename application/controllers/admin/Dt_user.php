@@ -5,6 +5,7 @@ class Dt_user extends CI_Controller{
   public function __construct(){
     parent::__construct();
     $this->load->model('admin/Dt_user_model');
+    $this->load->model('admin/Siswa_model');
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->helper('form');
@@ -15,6 +16,9 @@ class Dt_user extends CI_Controller{
   {
     $data['judul'] = 'Data User | Admin';
     $data['users'] = $this->Dt_user_model->getAllUser();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_user/index', $data);
@@ -32,6 +36,9 @@ class Dt_user extends CI_Controller{
   public function tambah()
   {
     $data['judul'] = 'Tambah User | Admin';
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_user/tambah', $data);
@@ -67,6 +74,9 @@ class Dt_user extends CI_Controller{
   {
     $data['judul'] = 'Detail Data User | Admin';
     $data['users'] = $this->Dt_user_model->getUserById($id);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/dt_user/detail', $data);

@@ -12,9 +12,12 @@ class Siswa extends CI_Controller {
     $this->load->model('Siswa_model','sw_mdl');
   }
 
-  public function index(){
+  public function index($kd_kelas){
     $data['judul'] = 'Data Siswa | Admin';
-    $data['siswa'] = $this->Siswa_model->getAllSiswa();
+    $data['siswa'] = $this->Siswa_model->getSiswaByKelas($kd_kelas);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/siswa/index', $data);
@@ -38,6 +41,9 @@ class Siswa extends CI_Controller {
     {
       $data['judul'] = 'Tambah Siswa | Admin';
       $data['kelas'] = $this->Siswa_model->getAllKelas ();
+      $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+      $data['kelas'] = $this->Siswa_model->getAllKelas();
+      $data['menu'] = $this->Siswa_model->menu();
 
       $this->load->view('admin/templates/header', $data);
       $this->load->view('admin/siswa/tambah', $data);
@@ -72,6 +78,9 @@ class Siswa extends CI_Controller {
     {
       $data['judul'] = 'Detail Data Siswa | Admin';
       $data['siswa'] = $this->Siswa_model->getSiswaBy($nipd);
+      $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+      $data['kelas'] = $this->Siswa_model->getAllKelas();
+      $data['menu'] = $this->Siswa_model->menu();
 
       $this->load->view('admin/templates/header', $data);
       $this->load->view('admin/siswa/detail', $data);
@@ -83,6 +92,9 @@ class Siswa extends CI_Controller {
       $data['judul'] = 'Edit Data Siswa | Admin';
       $data['siswa'] = $this->Siswa_model->getSiswaBy($nipd);
       $data['kelas'] = $this->Siswa_model->getAllKelas();
+      $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+      $data['kelas'] = $this->Siswa_model->getAllKelas();
+      $data['menu'] = $this->Siswa_model->menu();
       if(empty($data)) redirect('admin/siswa');
 
       $this->load->view('admin/templates/header', $data);

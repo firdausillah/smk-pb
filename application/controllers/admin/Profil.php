@@ -7,6 +7,7 @@ class Profil extends CI_Controller{
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->model('admin/Profil_model');
+    $this->load->model('admin/Siswa_model');
     $this->load->helper('form');
     $this->load->model('Profil_model','prfl');
   }
@@ -15,6 +16,9 @@ class Profil extends CI_Controller{
   {
     $data['judul'] = 'Data Profil | Admin';
     $data['profil'] = $this->Profil_model->getById(1);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/profil/index', $data);
@@ -24,6 +28,9 @@ class Profil extends CI_Controller{
   {
     $data['judul'] = 'Edit Data Profil | Admin';
     $data['profil'] = $this->Profil_model->getById($id);
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/profil/edit', $data);
@@ -33,6 +40,9 @@ class Profil extends CI_Controller{
   {
     $data['judul'] = 'Tambah Data Profil | Admin';
     $data['profil'] = $this->Profil_model->getAll();
+    $data['jurusan'] = $this->Siswa_model->getAllJurusan();
+    $data['kelas'] = $this->Siswa_model->getAllKelas();
+    $data['menu'] = $this->Siswa_model->menu();
 
     $this->load->view('admin/templates/header', $data);
     $this->load->view('admin/profil/tambah', $data);
