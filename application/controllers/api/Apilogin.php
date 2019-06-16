@@ -12,7 +12,7 @@ class Apilogin extends CI_Controller {
     if(!empty($bio)){
       $response=['status'=>200,'message'=>'Selamat Datang '.$bio->nama,'biodata'=>$bio];
     }else{
-      $response=['status'=>303,'message'=>'Username Tidak ditemukan. Mohon Periksa kembali.'];
+      $response=['status'=>303,'message'=>'Username Tidak ditemukan. Mohon Periksa kembali. '];
     }
     echo json_encode($response);
   }
