@@ -78,7 +78,7 @@ class Kalender extends CI_Controller{
   public function detail($id)
   {
     $data['judul'] = 'Detail Data kalender | Admin';
-    $data['kalender'] = $this->kalender_model->getBy($id);
+    $data['kalender'] = $this->Kalender_model->getBy($id);
     $data['jurusan'] = $this->Siswa_model->getAllJurusan();
     $data['kelas'] = $this->Siswa_model->getAllKelas();
     $data['menu'] = $this->Siswa_model->menu();
@@ -91,7 +91,7 @@ class Kalender extends CI_Controller{
   public function edit($id)
   {
     $data['judul'] = 'Edit Data kalender | Admin';
-    $data['kalender'] = $this->kalender_model->getBy($id);
+    $data['kalender'] = $this->Kalender_model->getBy($id);
     if(empty($data)) redirect('admin/kalender');
     $data['jurusan'] = $this->Siswa_model->getAllJurusan();
     $data['kelas'] = $this->Siswa_model->getAllKelas();
@@ -107,8 +107,7 @@ class Kalender extends CI_Controller{
     $id	= $this->input->post('id');
     $data = array (
       'id' => $this->input->post('id'),
-      'tahun_kalender' => $this->input->post('tahun_kalender'),
-      'isi' => $this->input->post('isi')
+      'tahun_kalender' => $this->input->post('tahun_kalender')
     );
     $this->db->where('id',$id);
     $this->db->update('kalender',$data);

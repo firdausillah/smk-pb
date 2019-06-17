@@ -30,7 +30,7 @@
               <tr>
                 <th>File Kalender</th>
                 <td>:</td>
-                <td><a href="<?= base_url('uploads/file/kalender'); ?><?= $kalender['file_kalender']; ?>"><embed src="<?= base_url() ?>uploads/file/kalender/<?= $kurikulum['file_kalender']; ?>" width="100%" height="400"> </embed></a></td>
+                <td><a href="<?= base_url('uploads/file/kalender'); ?><?= $kalender['file_kalender']; ?>"><embed src="<?= base_url() ?>uploads/file/kalender/<?= $kalender['file_kalender']; ?>" width="100%" height="400"> </embed></a></td>
               </tr>
             </table>
           </div>
