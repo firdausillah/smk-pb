@@ -1,46 +1,6 @@
 <!-- <div class="container">
 	<!--/banner-->
 	<div class="banner">
-		<!-- <div class="bd-example">
-		  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-		    <ol class="carousel-indicators">
-		      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-		      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-		      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-		    </ol>
-		    <div class="carousel-inner">
-		      <div class="carousel-item active">
-		        <img src="<?= base_url(); ?>uploads/img/slider/img1.jpg" class="d-block w-100" alt="...">
-		        <div class="carousel-caption d-none d-md-block">
-		          <h5>First slide label</h5>
-		          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-		        </div>
-		      </div>
-		      <div class="carousel-item">
-		        <img src="<?= base_url(); ?>uploads/img/slider/img2.jpg" class="d-block w-100" alt="...">
-		        <div class="carousel-caption d-none d-md-block">
-		          <h5>Second slide label</h5>
-		          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		        </div>
-		      </div>
-		      <div class="carousel-item">
-		        <img src="<?= base_url(); ?>uploads/img/slider/img3.jpg" class="d-block w-100" alt="...">
-		        <div class="carousel-caption d-none d-md-block">
-		          <h5>Third slide label</h5>
-		          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-		        </div>
-		      </div>
-		    </div>
-		    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-		      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		      <span class="sr-only">Previous</span>
-		    </a>
-		    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		      <span class="sr-only">Next</span>
-		    </a>
-		  </div>
-		</div> -->
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -94,27 +54,34 @@
 					<div class="blog-grid-top">
 						<div class="b-grid-top">
 							<div class="blog_info_left_grid box mx-auto img-fluid" height>
-								<a href="<?= base_url() ?>assets/img/front/6.jpg" target="_blank">
-									<img src="<?= base_url() ?>assets/img/front/6.jpg" height="200" class="img-fluid" alt="">
+								<a href="<?= base_url() ?>assets/img/front/kepala.jpg" target="_blank">
+									<img src="<?= base_url() ?>assets/img/front/kepala.jpg" width="750px" class="img-fluid" alt="">
 								</a>
 							</div>
 							<div class="blog-info-middle">
 								<ul>
 									<li>
 										<a href="#">
-											<i class="far "></i> Nama Kepala Sekolah</a>
+											<i class="far "></i> Ir. H. Ade Firdaus </a>
 									</li>
 								</ul>
 							</div>
 						</div>
 
 						<h3>
-							<a href="#">Amet consectetur adipisicing </a>
+							<a href="#"> Sambutan Kepala Sekolah </a>
 						</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-							aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
-							aute irudre dolor in elit sed uta labore dolore reprehender</p>
-						<a href="#" class="btn btn-primary read-m">Read More</a>
+						<p><br>Bismillahirohmannirrohim<br>
+
+							<br>Assalamualaikum Warahmatullah Wabarakatuh<br>
+
+							<p>Alhamdulillahi robbil alamin syukur atas nikmat iman dan islam Allah SWT kita panjatkan, sehingga dengan rahmat dan karunia-Nya lah akhirnya Website sekolah ini dengan alamat www.smkpusabangsa2.com dapat kami perbaharui.</p>
+							<p>Kami mengucapkan selamat datang di Website kami Sekolah Menengah Kejuruan Negeri (SMKN) 2 Puspa bangsa sebagai portal inforamasi sekolah untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.</p>
+							<p>Kami berharap dengan adanya Website ini dapat memberikan informasi dan sarana promosi yang dapat mengenalkan sekolah dengan masyarakat dan interaksi positif baik dengan civitas akademik maupun dengan masyarakat.</p>
+
+							<p>Kami menghimbau mari kita bersinergi untuk bekerja hanya semata-semata ibadah karena Allah dan ridho Allah, demi mencerdaskan anak bangsa, sebagai pewarus bangsa dimasa yang akan datang.</p>	
+
+							<p>Terima kasih semoga Allah ‘Azza Wa Jalla menyertai doa kita semua……amin.</p>
 					</div>
 				</div>
 				<!--//left-->

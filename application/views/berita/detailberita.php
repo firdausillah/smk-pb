@@ -19,7 +19,7 @@
           <div class="b-grid-top">
             <div class="blog_info_left_grid">
               <a href="<?= base_url(); ?>uploads/img/berita/<?= $detail['gambar']; ?>">
-                <img src="<?= base_url(); ?>uploads/img/berita/<?= $detail['gambar']; ?>" class="img-fluid" alt="">
+                <img src="<?= base_url(); ?>uploads/img/berita/<?= $detail['gambar']; ?>" class="w-100 img-fluid" alt="">
               </a>
             </div>
             <div class="blog-info-middle">

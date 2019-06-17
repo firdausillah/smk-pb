@@ -70,7 +70,11 @@ class Nilai extends CI_Controller {
         else exit('Error : '.$this->upload->display_errors());
 
         $pos['nuptk'] = $this->session->userdata('username');
-        if($this->n_mdl->update($pos['nipd'],$pos)){
+        // print_r($pos); exit();
+        if($this->n_mdl->tambah($pos['nipd'],$pos)){
+          $this->session->set_flashdata('info','Data Behasil Ditambah !');
+          redirect(@$_GET['url']);
+        }elseif($this->n_mdl->update($pos['nipd'],$pos)){
           $this->session->set_flashdata('info','Data Behasil Ditambah !');
           redirect(@$_GET['url']);
         }else {

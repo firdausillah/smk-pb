@@ -41,7 +41,7 @@
               </thead>
               <tbody>
               <?php $no=1;
-               foreach ($kelas as $n) :?>
+               foreach ($nilai as $n) :?>
               <tr>
                 <td><?= $no; ?></td>
                 <td><a href="<?= base_url('uploads/img/'); ?><?= $n['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $n['gambar']; ?>" alt="<?= $n['nama']; ?>" height="60px"></img></a></td>

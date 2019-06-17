@@ -158,14 +158,12 @@ $nav = $nav[3];
         </li>
         <li class="treeview"><a href="#"><i class="fa fa-globe"></i> <span>Informasi</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
           <ul class="treeview-menu">
-            <!-- <li><a href="<?= base_url(); ?>admin/profil"><i class="fa fa-circle-o"></i> Data Profil</a></li> -->
             <li><a href="<?= base_url(); ?>admin/berita"><i class="fa fa-circle-o"></i> Berita</a></li>
             <li><a href="<?= base_url(); ?>admin/kalender"><i class="fa fa-circle-o"></i> Kalender Pendidikan</a></li>
             <li><a href="<?= base_url(); ?>admin/kurikulum"><i class="fa fa-circle-o"></i> Kurikulum</a></li>
+            <li><a href="<?= base_url(); ?>admin/pengumuman"><i class="fa fa-circle-o"></i> Pengumuman</a></li>
           </ul>
         </li>
-        <!-- <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li> -->
-        <!-- <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-fax"></i> <span>Extrakulikuler</span></a></li> -->
       </ul>
     </section>
     <!-- /.sidebar -->

@@ -44,9 +44,9 @@
                 <div class="form-group">
                   <label for="id_jurusan" class="col-sm-2 control-label">Jurusan</label>
                   <div class="col-sm-10">
-                    <select class="form-control" name="id_jurusan">
+                    <select class="form-control" name="id_jurusan" id="id_jurusan">
                       <?php foreach ($kelas as $kls) :?>
-                      <option value="<?= $kls['id_jurusan']; ?>"><?= $kls['jurusan']; ?></option>
+                      <option value="<?= $kls['id_jurusan']; ?>"><?= $kls['id_jurusan']; ?></option>
                     <?php endforeach; ?>
                     </select>
                   </div>

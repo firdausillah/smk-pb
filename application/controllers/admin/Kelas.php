@@ -40,7 +40,7 @@ class Kelas extends CI_Controller{
   public function tambah()
   {
     $data['judul'] = 'Tambah Data Kelas | Admin';
-    $data['kelas'] = $this->Kelas_model->getAllKelas();
+    $data['kelas'] = $this->Kelas_model->getKelas();
     $data['jurusan'] = $this->Siswa_model->getAllJurusan();
     $data['menu'] = $this->Siswa_model->menu();
 
