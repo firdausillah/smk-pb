@@ -4,6 +4,9 @@ class Kalender extends CI_Controller{
 
   public function __construct(){
     parent::__construct();
+    if(strtolower($this->session->userdata('level'))!='wali_kelas'){
+      redirect('login/logout');
+    }
     $this->load->model('admin/Kalender_model');
     $this->load->model('admin/Siswa_model');
     // $this->load->library('ftp');

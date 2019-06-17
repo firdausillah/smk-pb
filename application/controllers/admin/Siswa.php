@@ -4,8 +4,8 @@ class Siswa extends CI_Controller {
 
   public function __construct(){
     parent::__construct();
-    if(strtolower($this->session->userdata('level'))!='admin'){
-      redirect('login');
+    if(strtolower($this->session->userdata('level'))!='wali_kelas'){
+      redirect('login/logout');
     }
     $this->load->helper(array('url'));
     $this->load->database();
@@ -33,7 +33,7 @@ class Siswa extends CI_Controller {
       @unlink(FCPATH.'uploads/img'.$data->gambar);
       if($this->sw_mdl->delete(['nipd'=>$nipd])){
         $this->session->set_flashdata('info','Data Behasil Dihapus !');
-        redirect('admin/siswa');
+        redirect(@$_GET['url']);
       } else{
          exit("Delete Data Error.");
       }
@@ -70,7 +70,7 @@ class Siswa extends CI_Controller {
 
       if($this->sw_mdl->tambah($pos)){
         $this->session->set_flashdata('info','Data Behasil Ditambah !');
-        redirect('admin/siswa/index/'.$_POST['ks_kelas']);
+        redirect('admin/siswa/index/'.$_POST['kd_kelas']);
       }else {
         exit('Insert Data Error.');
       }

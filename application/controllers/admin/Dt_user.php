@@ -4,6 +4,9 @@ class Dt_user extends CI_Controller{
 
   public function __construct(){
     parent::__construct();
+    if(strtolower($this->session->userdata('level'))!='wali_kelas'){
+      redirect('login/logout');
+    }
     $this->load->model('admin/Dt_user_model');
     $this->load->model('admin/Siswa_model');
     $this->load->helper(array('url'));

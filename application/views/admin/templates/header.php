@@ -136,6 +136,7 @@ $nav = $nav[3];
                 <?php endforeach; ?>
                 </li>
               <?php endforeach; ?>
+                <li><a href="<?= base_url("admin/siswa/tambah") ?>">Tambah Data Siswa</a></li>
               </ul>
             </li>
             <li class="treeview"><a href="<?= base_url(); ?>admin/nilai"><i class="fa fa-circle-o"></i> Data Nilai Siswa <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>

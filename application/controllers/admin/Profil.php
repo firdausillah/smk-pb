@@ -3,7 +3,9 @@
 class Profil extends CI_Controller{
   public function __construct(){
     parent::__construct();
-
+    if(strtolower($this->session->userdata('level'))!='wali_kelas'){
+      redirect('login/logout');
+    }
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->model('admin/Profil_model');
