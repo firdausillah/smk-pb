@@ -34,8 +34,6 @@ class Siswa extends CI_Controller {
     {
       $data = $this->sw_mdl->getToDelete(['nipd'=>$nipd])->row();
       @unlink(FCPATH.'uploads/img'.$data->gambar);
-      $actual_link = "$_SERVER[REQUEST_URI]";
-      print_r($actual_link[2]); exit();
       if($this->sw_mdl->delete(['nipd'=>$nipd])){
         $this->session->set_flashdata('info','Data Behasil Dihapus !');
         redirect('admin/siswa/index/MJ1');
