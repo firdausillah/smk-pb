@@ -29,7 +29,7 @@ class Jurusan extends CI_Controller{
   public function edit($id_jurusan)
   {
     $data['judul'] = 'Edit Data Jurusan | Admin';
-    $data['jurusan'] = $this->Jurusan_model->getById($id_jurusan);
+    $data['jurusan1'] = $this->Jurusan_model->getById($id_jurusan);
     $data['jurusan'] = $this->Siswa_model->getAllJurusan();
     $data['kelas'] = $this->Siswa_model->getAllKelas();
     $data['menu'] = $this->Siswa_model->menu();

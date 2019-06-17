@@ -28,7 +28,7 @@ class Kelas extends CI_Controller{
   public function edit($kd_kelas)
   {
     $data['judul'] = 'Edit Data Kelas | Admin';
-    $data['kelas'] = $this->Kelas_model->getById($kd_kelas);
+    $data['kelas1'] = $this->Kelas_model->getById($kd_kelas);
     $data['jurusan'] = $this->Siswa_model->getAllJurusan();
     $data['kelas'] = $this->Siswa_model->getAllKelas();
     $data['menu'] = $this->Siswa_model->menu();

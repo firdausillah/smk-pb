@@ -26,25 +26,25 @@
                 <div class="form-group">
                   <label for="kd_kelas" class="col-sm-2 control-label">Kode Kelas</label>
                   <div class="col-sm-10">
-                    <text id="kd_kelas" class="col-sm-2 control-label"><?= $kelas['kd_kelas']; ?></text>
+                    <text id="kd_kelas" class="col-sm-2 control-label"><?= $kelas1['kd_kelas']; ?></text>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="kelas" class="col-sm-2 control-label">Kelas</label>
                   <div class="col-sm-10">
-                    <input type="text" name="kelas" class="form-control" id="kelas" required value="<?= $kelas['kelas']; ?>"placeholder="Kelas">
+                    <input type="text" name="kelas" class="form-control" id="kelas" required value="<?= $kelas1['kelas']; ?>"placeholder="Kelas">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="golongan" class="col-sm-2 control-label">Golongan</label>
                   <div class="col-sm-10">
-                    <input type="number" name="golongan" class="form-control" id="golongan" required value="<?= $kelas['golongan']; ?>"placeholder="Golongan">
+                    <input type="number" name="golongan" class="form-control" id="golongan" required value="<?= $kelas1['golongan']; ?>"placeholder="Golongan">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="id_jurusan" class="col-sm-2 control-label">ID Jurusan</label>
                   <div class="col-sm-10">
-                    <text id="id_jurusan" class="col-sm-2 control-label"><?= $kelas['id_jurusan']; ?></text>
+                    <text id="id_jurusan" class="col-sm-2 control-label"><?= $kelas1['id_jurusan']; ?></text>
                   </div>
                 </div>
               </div>

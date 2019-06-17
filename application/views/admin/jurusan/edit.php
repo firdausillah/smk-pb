@@ -22,12 +22,12 @@
           <!-- /.box-header -->
           <div class="box-body">
             <?= form_open_multipart('admin/jurusan/save_edit', array('class'=>'form-horizontal')); ?>
-            <input type="hidden" name="id_jurusan" value="<?= $jurusan['id_jurusan']; ?>">
+            <input type="hidden" name="id_jurusan" value="<?= $jurusan1['id_jurusan']; ?>">
               <div class="box-body">
                 <div class="form-group">
                   <label for="jurusan" class="col-sm-2 control-label">Jurusan</label>
                   <div class="col-sm-10">
-                    <input type="text" name="jurusan" class="form-control" id="jurusan" required value="<?= $jurusan['jurusan']; ?>"placeholder="">
+                    <input type="text" name="jurusan" class="form-control" id="jurusan" required value="<?= $jurusan1['jurusan']; ?>"placeholder="">
                   </div>
                 </div>
               </div>
