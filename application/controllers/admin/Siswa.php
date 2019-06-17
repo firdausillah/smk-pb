@@ -12,6 +12,9 @@ class Siswa extends CI_Controller {
     $this->load->model('admin/Siswa_model');
     $this->load->helper('form');
     $this->load->model('Siswa_model','sw_mdl');
+    $nav = $nav_uri = explode('/', $_SERVER['REQUEST_URI']);
+    	// $nav_dok = $nav[count($nav)]
+    	// echo $nav; exit();
   }
 
   public function index($kd_kelas){
@@ -31,9 +34,11 @@ class Siswa extends CI_Controller {
     {
       $data = $this->sw_mdl->getToDelete(['nipd'=>$nipd])->row();
       @unlink(FCPATH.'uploads/img'.$data->gambar);
+      $actual_link = "$_SERVER[REQUEST_URI]";
+      print_r($actual_link[2]); exit();
       if($this->sw_mdl->delete(['nipd'=>$nipd])){
         $this->session->set_flashdata('info','Data Behasil Dihapus !');
-        redirect(@$_GET['url']);
+        redirect('admin/siswa/index/MJ1');
       } else{
          exit("Delete Data Error.");
       }
