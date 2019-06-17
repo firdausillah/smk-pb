@@ -31,7 +31,10 @@ class Login extends CI_Controller {
       foreach ($ceklogin as $row);
       $this->session->set_userdata('username', $row->username);
       $this->session->set_userdata('level', $row->level);
-
+      $this->session->set_userdata('gambar', $row->gambar);
+      $this->session->set_userdata('nama', $row->nama);
+      // print_r($row);
+      // print_r($this->session->userdata()); exit();
       if($this->session->userdata('level')=='admin'){
         redirect('admin/home');
       }elseif($this->session->userdata('level')=='wali_kelas'){
@@ -48,4 +51,10 @@ class Login extends CI_Controller {
         $this->load->view('templates/footer',$data);
       }
     }
+
+    function logout(){
+      $this->session->sess_destroy();
+			redirect(base_url('login'));
+    }
+
 }
