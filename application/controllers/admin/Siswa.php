@@ -4,7 +4,9 @@ class Siswa extends CI_Controller {
 
   public function __construct(){
     parent::__construct();
-
+    if(strtolower($this->session->userdata('level'))!='admin'){
+      redirect('login');
+    }
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->model('admin/Siswa_model');
@@ -68,7 +70,7 @@ class Siswa extends CI_Controller {
 
       if($this->sw_mdl->tambah($pos)){
         $this->session->set_flashdata('info','Data Behasil Ditambah !');
-        redirect('admin/siswa');
+        redirect('admin/siswa/index/'.$_POST['ks_kelas']);
       }else {
         exit('Insert Data Error.');
       }

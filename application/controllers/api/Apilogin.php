@@ -10,7 +10,7 @@ class Apilogin extends CI_Controller {
     $response = ['status'=>500,'message'=>'Internal Server Errors.'];
     $bio = $this->db->where('nipd',@$data->username)->get('siswa')->row();
     if(!empty($bio)){
-      $response=['status'=>200,'message'=>'Selamat Datang '.$bio->nama,'biodata'=>$bio];
+      $response=['status'=>200,'message'=>'Selamat Datang '.$bio->nama,'biodata'=>$bio,'foto_user'=>$data->gambar];
     }else{
       $response=['status'=>303,'message'=>'Username Tidak ditemukan. Mohon Periksa kembali. '];
     }
