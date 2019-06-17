@@ -136,7 +136,7 @@ $nav = $nav[3];
                 <?php endforeach; ?>
                 </li>
               <?php endforeach; ?>
-                <li><a href="<?= base_url("admin/siswa/tambah") ?>">Tambah Data Siswa</a></li>
+                <li><a href="<?= base_url("admin/siswa/tambah") ?>"><i class="fa fa-plus"></i> Tambah Data Siswa</a></li>
               </ul>
             </li>
             <li class="treeview"><a href="<?= base_url(); ?>admin/nilai"><i class="fa fa-circle-o"></i> Data Nilai Siswa <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
@@ -164,9 +164,8 @@ $nav = $nav[3];
             <li><a href="<?= base_url(); ?>admin/kurikulum"><i class="fa fa-circle-o"></i> Kurikulum</a></li>
           </ul>
         </li>
-        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li>
-        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-fax"></i> <span>Extrakulikuler</span></a></li>
-        <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-users"></i> <span>Data Users</span></a></li>
+        <!-- <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-dashboard"></i> <span>Slider</span></a></li> -->
+        <!-- <li class="treeview"><a href="<?= base_url(); ?>admin/"><i class="fa fa-fax"></i> <span>Extrakulikuler</span></a></li> -->
       </ul>
     </section>
     <!-- /.sidebar -->

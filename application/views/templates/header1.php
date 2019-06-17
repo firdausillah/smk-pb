@@ -79,6 +79,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   									<div class="dropdown-divider"></div>
   									<a class="dropdown-item" href="<?= site_url();?>profil/guru">Guru dan Tenaga Kependidikan</a>
   									<div class="dropdown-divider"></div>
+  									<a class="dropdown-item" href="<?= site_url();?>">Profil Umum</a>
+  									<div class="dropdown-divider"></div>
   									<a class="dropdown-item" href="<?= site_url();?>profil/struktur">Struktur Sekolah</a>
   								</div>
   							</li>
@@ -92,14 +94,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   									<a class="dropdown-item" href="<?= site_url();?>informasi">Pengumuman</a>
   									<div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="<?= site_url();?>informasi/kurikulum">Kurikulum</a>
+                    <div class="dropdown-divider"></div>
+  									<a class="dropdown-item" href="<?= site_url();?>informasi/profil_umum">Profil Umum</a>
+  									<div class="dropdown-divider"></div>
+  									<a class="dropdown-item" href="<?= site_url();?>informasi/kemitraan">Kemitraan DU/DI</a>
   									<div class="dropdown-divider"></div>
   									<a class="dropdown-item" href="<?= site_url();?>informasi/pendataan_siswa">Daftar Sebagai Siswa Aktif</a>
+  									<div class="dropdown-divider"></div>
+  									<a class="dropdown-item" href="<?= site_url();?>">Alumni</a>
+  									<div class="dropdown-divider"></div>
+  									<a class="dropdown-item" href="<?= site_url();?>">Organisasi dan Kegiatan Sekolah</a>
   								</div>
   							</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle <?php echo ($nav == 'keahlian' ? 'active' : '') ?>" href="#" id="navbarDropdownahli" role="button" data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">
+										Kompetensi Keahlian
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdownahli">
+										<a class="dropdown-item" href="#"></a>
+										<a class="dropdown-item" href="<?= site_url();?>keahlian/multimedia">Multimedia</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="<?= site_url();?>">Akuntansi</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="<?= site_url();?>">Keperawatan</a>
+									</div>
+								</li>
   							<li class="nav-item">
   								<a class="nav-link <?php echo ($nav == 'berita' ? 'active' : '') ?>" href="<?= site_url();?>berita">Berita</a>
   							</li>
-
+								<li class="nav-item">
+  								<a class="nav-link <?php echo ($nav == 'ppdb' ? 'active' : '') ?>" href="<?= site_url();?>ppdb">PPDB</a>
+  							</li>
   						</ul>
   					</div>
   				</nav>

@@ -123,7 +123,7 @@ class Siswa extends CI_Controller {
       $this->db->update('siswa',$data);
       if ($this->db->affected_rows()){
         $this->session->set_flashdata('info','Data Behasil Diupdate !');
-        redirect('admin/siswa');
+        redirect('admin/siswa/index/'.$_POST['kd_kelas']);
       }
     }
   }
