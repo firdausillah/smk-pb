@@ -29,10 +29,10 @@ class Nilai extends CI_Controller {
     public function delete($nipd)
     {
       $data = $this->n_mdl->getToDelete(['nipd'=>$nipd])->row();
-      @unlink(FCPATH.'uploads/img'.$data->gambar);
+      @unlink(FCPATH.'uploads/file/nilai'.$data->nilai);
       if($this->n_mdl->delete(['nipd'=>$nipd])){
         $this->session->set_flashdata('info','Data Behasil Dihapus !');
-        redirect('admin/nilai');
+        redirect(@$_GET['url']);
       } else{
          exit("Delete Data Error.");
       }
@@ -54,12 +54,26 @@ class Nilai extends CI_Controller {
     function save()
     {
       $pos = $_POST;
+      if(!empty($_FILES['nilai']['name'])){
+        $cfg = [
+          'file_name'=>"Nilai_$pos[nipd].pdf",
+          'upload_path' => './uploads/file/nilai',
+    			'allowed_types' => 'pdf|doc',
+    			'overwrite' => true
+        ];
+        // if(!empty($pos['file_kurikulum'])) $cfg['file_name'] = $pos['file_kurikulum'];
+        $this->load->library('upload',$cfg);
 
-      if($this->n_mdl->tambah($pos)){
-        $this->session->set_flashdata('info','Data Behasil Ditambah !');
-        redirect('admin/nilai');
-      }else {
-        exit('Insert Data Error.');
+        if($this->upload->do_upload('nilai')) $pos['nilai'] = $this->upload->data('file_name');
+        else exit('Error : '.$this->upload->display_errors());
+
+        $pos['nuptk'] = $this->session->userdata('username');
+        if($this->n_mdl->update($pos['nipd'],$pos)){
+          $this->session->set_flashdata('info','Data Behasil Ditambah !');
+          redirect(@$_GET['url']);
+        }else {
+          exit('Insert Data Error.');
+        }
       }
     }
 

@@ -17,7 +17,6 @@
         <div class="box">
           <div class="box-header">
             <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
-            <a href="<?= site_url(); ?>admin/nilai/tambah" class="btn btn-primary"><i class="fa fa-plus"></i> &nbsp Tambah Nilai </a>
           </div>
           <!--.info -->
           <?php if($this->session->flashdata('info')): ?>
@@ -32,24 +31,36 @@
               <thead>
               <tr>
                 <th>No</th>
-                <th>NIPD</th>
-                <th>Nama Nilai</th>
-                <th>Foto</th>
+                <th>Gambar</th>
+                <th>Nama Siswa</th>
+                <th>Kelas</th>
+                <th>File Nilai</th>
+                <th>Upload File Nilai</th>
                 <th>Action</th>
               </tr>
               </thead>
               <tbody>
               <?php $no=1;
-               foreach ($siswa as $n) :?>
+               foreach ($kelas as $n) :?>
               <tr>
                 <td><?= $no; ?></td>
-                <td><?= $n['nama']; ?></td>
-                <td><?= $n['nama']; ?></td>
                 <td><a href="<?= base_url('uploads/img/'); ?><?= $n['gambar']; ?>"><img src="<?= base_url('uploads/img/') ?><?= $n['gambar']; ?>" alt="<?= $n['nama']; ?>" height="60px"></img></a></td>
+                <td><?= $n['nama']; ?></td>
+                <td><?= $n['kelas']; ?> <?= $n['jurusan']; ?> <?= $n['golongan']; ?></td>
+                <td><?= $n['nilai']; ?></td>
                 <td>
-                  <a href="<?= base_url(); ?>admin/nilai/detail/<?= $n['nipd']; ?>" class="fa fa-eye btn btn-primary"></a>
+                  <?=form_open_multipart('admin/nilai/save?url='.$this->uri->uri_string);?>
+                    <input type="hidden" name="nipd" value="<?= $n['nipd']; ?>">
+                    <div class="input-group">
+                      <input type="file" name="nilai" class="form-control">
+                      <div class="input-group-btn">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-upload"></i></button>
+                      </div>
+                    </div>
+                  </form>
+                </td>
+                <td>
                   <a href="<?= base_url(); ?>admin/nilai/delete/<?= $n['nipd']; ?>" class="fa fa-trash btn btn-danger" onclick="return confirm_dialog();"></a>
-                  <a href="<?= base_url(); ?>admin/nilai/edit/<?= $n['nipd']; ?>" class="fa fa-pencil btn btn-warning"></a>
                 </td>
               </tr>
             <?php $no++;

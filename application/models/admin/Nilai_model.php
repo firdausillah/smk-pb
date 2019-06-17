@@ -21,10 +21,17 @@ class Nilai_model extends CI_Model{
   public function getNilaiByKelas($kd_kelas)
   {
     return $this->db->get_where('nilai_siswa', ['kd_kelas' => $kd_kelas])->result_array();
+
   }
   public function getAllKelas()
   {
-    return $this->db->get('kelas')->result_array();
+    $this->db->select('siswa.nipd,siswa.gambar,siswa.nama,
+      ,nilai.nilai,kelas.kelas,kelas.golongan,jurusan.jurusan')
+    ->join('nilai','nilai.nipd=siswa.nipd','left')
+    ->join('kelas','kelas.kd_kelas=siswa.kd_kelas')
+    ->join('jurusan','jurusan.id_jurusan=kelas.id_jurusan');
+    return $this->db->get('siswa')->result_array();
+    // return $this->db->get('kelas')->result_array();
   }
   function menu(){
     $menu=array();

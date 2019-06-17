@@ -32,9 +32,11 @@ class Login extends CI_Controller {
       $this->session->set_userdata('username', $row->username);
       $this->session->set_userdata('level', $row->level);
 
-      if($this->session->userdata('level')=='Admin'){
+      if($this->session->userdata('level')=='admin'){
         redirect('admin/home');
-      }elseif($this->session->userdata('level')=='Siswa'){
+      }elseif($this->session->userdata('level')=='wali_kelas'){
+        redirect('admin/home');
+      }elseif($this->session->userdata('level')=='siswa'){
         redirect('siswa/index');
       }
     }else{

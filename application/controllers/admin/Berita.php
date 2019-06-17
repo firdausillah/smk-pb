@@ -6,8 +6,6 @@ class Berita extends CI_Controller{
     parent::__construct();
     $this->load->model('admin/Berita_model');
     $this->load->model('admin/Siswa_model');
-    // $this->load->library('ftp');
-    // $this->load->library('upload');
     $this->load->helper(array('url'));
     $this->load->database();
     $this->load->helper('form');
