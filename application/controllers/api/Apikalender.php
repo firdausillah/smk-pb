@@ -6,7 +6,7 @@ class Apikalender extends CI_Controller {
   }
 
   public function index(){
-    $data = file_get_contents('uploads/file/kalender/COBAPDF.pdf');
+    $data = file_get_contents('uploads/file/kalender/kalender_akademik_2018-2019.pdf');
     echo base64_encode($data);
   }
   function nilai($nipd){

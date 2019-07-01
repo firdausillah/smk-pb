@@ -33,7 +33,7 @@ class Kalender extends CI_Controller{
   public function delete($id)
   {
     $data = $this->kldr_mdl->getToDelete(['id'=>$id])->row();
-    @unlink(FCPATH.'uploads/file/kalender'.$data->file_kalender);
+    @unlink(FCPATH.'uploads/file/kalender/'.$data->file_kalender);
     if($this->kldr_mdl->delete(['id'=>$id])){
       $this->session->set_flashdata('info','Data Behasil Dihapus !');
       redirect('admin/kalender');

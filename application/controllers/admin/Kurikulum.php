@@ -33,7 +33,7 @@ class Kurikulum extends CI_Controller{
   public function delete($id)
   {
     $data = $this->krl_mdl->getToDelete(['id'=>$id])->row();
-    @unlink(FCPATH.'uploads/file/kurikulum'.$data->file_kurikulum);
+    @unlink(FCPATH.'uploads/file/kurikulum/'.$data->file_kurikulum);
     if($this->krl_mdl->delete(['id'=>$id])){
       $this->session->set_flashdata('info','Data Behasil Dihapus !');
       redirect('admin/kurikulum');

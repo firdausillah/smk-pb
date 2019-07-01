@@ -31,7 +31,7 @@ class Dt_guru extends CI_Controller{
   public function delete($nuptk)
   {
     $data = $this->gru_mdl->getToDelete(['nuptk'=>$nuptk])->row();
-    @unlink(FCPATH.'uploads/img'.$data->gambar);
+    @unlink(FCPATH.'uploads/img/'.$data->gambar);
     if($this->gru_mdl->delete(['nuptk'=>$nuptk])){
       $this->session->set_flashdata('info','Data Behasil Dihapus !');
       redirect('admin/dt_guru');

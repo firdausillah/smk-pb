@@ -50,9 +50,9 @@ $nav = $nav[3];
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><img src="<?= base_url(); ?>assets/img/logo.png" alt="" height="30"></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><img src="<?= base_url(); ?>assets/img/logo2.png" alt="" height="30"></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -72,7 +72,7 @@ $nav = $nav[3];
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?= $img; ?>" class="img-circle" alt="User Image">
+                <img src="<?= $img; ?>" class="img-circle" height="100" alt="User Image">
                 <p>
                   <?= $nama; ?>
                   <small><?= date('l, d-m-Y');?></small>
@@ -107,18 +107,8 @@ $nav = $nav[3];
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
+      <?php if(strtolower($this->session->userdata('level'))=='wali_kelas'): ?>
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="<?php echo ($nav == 'home' ? 'active' : '') ?>"><a href="<?= base_url(); ?>admin/home"><i class="fa fa-home  treeview"></i> <span>Home</span></a></li>
@@ -165,6 +155,14 @@ $nav = $nav[3];
           </ul>
         </li>
       </ul>
+      <?php endif ?>
+      <?php if(strtolower($this->session->userdata('level'))=='siswa'): ?>
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="<?php echo ($nav == 'siswa' ? 'active' : '') ?>"><a href="<?= base_url(); ?>siswa/siswa"><i class="fa fa-home treeview"></i> <span>Data Siswa</span></a></li>
+        <li class="<?php echo ($nav == 'nilai' ? 'active' : '') ?>"><a href="<?= base_url(); ?>siswa/nilai"><i class="fa fa-file-o treeview"></i> <span>Nilai Siswa</span></a></li>
+      </ul>
+    <?php endif ?>
     </section>
     <!-- /.sidebar -->
   </aside>

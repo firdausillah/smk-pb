@@ -6,13 +6,9 @@ class Nilai_model extends CI_Model{
   {
     return $this->db->get('Jurusan')->result_array();
   }
-  public function getAllSiswa()
+  public function getNilaiSiswaBy($nipd)
   {
-    return $this->db->get('siswa')->result_array();
-  }
-  public function getSiswaBy($nipd)
-  {
-    return $this->db->get_where('siswa', ['nipd' => $nipd])->result_array();
+    return $this->db->get_where('nilai', ['nipd' => $nipd])->row_array();
   }
   public function getSiswaBykd($kd_kelas)
   {

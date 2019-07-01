@@ -36,10 +36,10 @@ body {
 
 }
 
-.carousel-caption p{
+/* .carousel-caption p{
 	color: white;
 	font-size: 20px;
-}
+} */
 
 body a {
 	text-decoration: none;
@@ -322,12 +322,12 @@ form.header-search {
 
 /* Since positioning the image, we need to help out the caption */
 
-.carousel-caption {
+/* .carousel-caption {
     bottom: 13em;
     z-index: 10;
     text-align: left;
     margin: 0 auto;
-}
+} */
 
 /* Declare heights because of positioning of img element */
 
@@ -418,7 +418,7 @@ form.header-search {
 	background-size: cover;
 }
 
-.carousel-caption h2,
+/* .carousel-caption h2,
 .carousel-caption h3 {
     letter-spacing: 2px;
     line-height: 1.4em;
@@ -434,7 +434,7 @@ form.header-search {
 }
 .carousel-caption span{
    display:block;
-}
+} */
 .carousel-indicators {
 	bottom: 17%;
 	left: 0%;
@@ -1278,18 +1278,18 @@ a.facebook:hover {
 	.carousel-item0 {
 		height: 38em;
 	}
-	.carousel-caption {
+	/* .carousel-caption {
 		bottom: 10em;
-	}
+	} */
 	form.header-search {
 		width: 34%;
 	}
 }
 @media(max-width:1080px) {
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 3.5em;
 		font-weight: 700;
-	}
+	} */
 	.carousel-item0 {
 		height: 35em;
 	}
@@ -1322,19 +1322,19 @@ a.facebook:hover {
 	.carousel-item0 {
 		height: 33em;
 	}
-	.carousel-caption {
+	/* .carousel-caption {
 		bottom: 8em;
-	}
+	} */
 	.top-forms span {
 		font-size: 0.85em;
 	}
 }
 
 @media(max-width:991px) {
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 3em;
 		font-weight: 700;
-	}
+	} */
 	.bottom-slider, .main-content-w3layouts-agileits, footer,.banner-bottom {
 		padding: 3em 0;
 	}
@@ -1359,10 +1359,10 @@ a.facebook:hover {
 }
 
 @media(max-width:900px) {
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 2.8em;
 		font-weight: 700;
-	}
+	} */
 	.mid-text-info {
 		float: right;
 		width: 60%;
@@ -1382,13 +1382,13 @@ a.facebook:hover {
 	.carousel-item0 {
 		height: 28em;
 	}
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 2.5em;
 		font-weight: 700;
 	}
 	.carousel-caption {
 		bottom: 7em;
-	}
+	} */
 }
 
 @media(max-width:767px) {
@@ -1413,10 +1413,10 @@ a.facebook:hover {
 	.address-left {
 		margin-bottom: 1em;
 	}
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 2.3em;
 		font-weight: 700;
-	}
+	} */
 	.carousel-item0 {
 		height: 26em;
 	}
@@ -1429,13 +1429,13 @@ a.facebook:hover {
 	.carousel-item0 {
 		height: 23em;
 	}
-	.carousel-caption {
+	/* .carousel-caption {
 		bottom: 5em;
 	}
 	.carousel-caption h2, .carousel-caption h3 {
 		font-size: 2.2em;
 		font-weight: 700;
-	}
+	} */
 }
 
 @media(max-width:640px) {
@@ -1478,10 +1478,10 @@ a.facebook:hover {
 	p {
 		font-size: 0.85em;
 	}
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 1.6em;
 		letter-spacing: 1px;
-	}
+	} */
 	a.btn.btn-primary.read-m {
 		padding: 0.5em 1.5em;
 		border: none;
@@ -1493,14 +1493,14 @@ a.facebook:hover {
 }
 
 @media(max-width:480px) {
-	.carousel-caption {
+	/* .carousel-caption {
 		bottom: 4em;
 	}
 	.carousel-caption h2, .carousel-caption h3 {
 		font-size: 1.4em;
 		font-weight: 700;
 		letter-spacing: 0px;
-	}
+	} */
 	.blog-grid-top {
 		padding-bottom: 1.5em;
 	}
@@ -1508,23 +1508,23 @@ a.facebook:hover {
 }
 
 @media(max-width:440px) {
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 1.4em;
 		letter-spacing: 1px;
-	}
+	} */
 }
 
 @media(max-width:414px) {
-	.carousel-caption h2, .carousel-caption h3 {
+	/* .carousel-caption h2, .carousel-caption h3 {
 		font-size: 1.3em;
 		letter-spacing: 0px;
-	}
+	} */
 	.carousel-item0 {
 		height: 16em;
 	}
-	.carousel-caption {
+	/* .carousel-caption {
 		bottom: 3em;
-	}
+	} */
 	.copyrighttop {
 		margin: 1em 0;
 	}

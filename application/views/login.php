@@ -20,7 +20,7 @@
 					<div class="form-group">
 					  <label for="username mb-2">User Name</label>
 					  <input type="text" class="form-control" id="username" name="username" aria-describedby="usern" placeholder="" required="">
-					  <small id="usern" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					  <!-- <small id="usern" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 					</div>
 				<div class="form-group">
 				  <label for="password mb-2">Password</label>
@@ -32,7 +32,7 @@
 				</div> -->
 					<button type="submit" class="btn btn-succes submit mb-4">Login</button><br>
 					<span class="text-danger"><?php if(isset($pesan)){echo $pesan;} ?></span>
-					<p><a href=""> Don't have an account?</a></p>
+					<!-- <p><a href=""> Don't have an account?</a></p> -->
 					<?= form_close(); ?>
 			  <!-- </form> -->
 			</div>

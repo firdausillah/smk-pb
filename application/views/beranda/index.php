@@ -10,26 +10,29 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active">
 					<img src="<?= base_url(); ?>uploads/img/slider/img1.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption">
-						<h3>Peralatan Praktikum
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Peralatan Praktikum
 							<span>Memadai</span>
-						</h3>
+						</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 				</div>
 				<div class="carousel-item ">
 					<img src="<?= base_url(); ?>uploads/img/slider/img2.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption">
-						<h3>Proses Belajar
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Proses Belajar
 							<span>Mengajar Menyenangkan</span>
-						</h3>
+						</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 				</div>
 				<div class="carousel-item ">
 					<img src="<?= base_url(); ?>uploads/img/slider/img3.jpg" class="d-block w-100" alt="...">
-					<div class="carousel-caption">
-						<h3>Mengedepankan Kegiatan
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Mengedepankan Kegiatan
 							<span>Praktikum</span>
-						</h3>
+						</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 				</div>
 			</div>
@@ -79,7 +82,7 @@
 							<p>Kami mengucapkan selamat datang di Website kami Sekolah Menengah Kejuruan Negeri (SMKN) 2 Puspa bangsa sebagai portal inforamasi sekolah untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.</p>
 							<p>Kami berharap dengan adanya Website ini dapat memberikan informasi dan sarana promosi yang dapat mengenalkan sekolah dengan masyarakat dan interaksi positif baik dengan civitas akademik maupun dengan masyarakat.</p>
 
-							<p>Kami menghimbau mari kita bersinergi untuk bekerja hanya semata-semata ibadah karena Allah dan ridho Allah, demi mencerdaskan anak bangsa, sebagai pewarus bangsa dimasa yang akan datang.</p>	
+							<p>Kami menghimbau mari kita bersinergi untuk bekerja hanya semata-semata ibadah karena Allah dan ridho Allah, demi mencerdaskan anak bangsa, sebagai pewarus bangsa dimasa yang akan datang.</p>
 
 							<p>Terima kasih semoga Allah ‘Azza Wa Jalla menyertai doa kita semua……amin.</p>
 					</div>

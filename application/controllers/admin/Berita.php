@@ -31,7 +31,7 @@ class Berita extends CI_Controller{
   public function delete($id)
   {
     $data = $this->brt_mdl->getToDelete(['id'=>$id])->row();
-    @unlink(FCPATH.'uploads/img/berita'.$data->gambar);
+    @unlink(FCPATH.'uploads/img/berita/'.$data->gambar);
     if($this->brt_mdl->delete(['id'=>$id])){
       $this->session->set_flashdata('info','Data Behasil Dihapus !');
       redirect('admin/berita');
